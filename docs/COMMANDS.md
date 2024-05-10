@@ -2,6 +2,23 @@
 
 A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](https://spacelift.io/blog/kubernetes-cheat-sheet#events).
 
+- [kubectl Commands](#kubectl-commands)
+  - [Output Format \& General Options](#output-format--general-options)
+  - [Configuration Files (Manifests)](#configuration-files-manifests)
+  - [Cluster Management \& Context](#cluster-management--context)
+  - [Cronjobs](#cronjobs)
+  - [DaemonSets](#daemonsets)
+  - [Deployments](#deployments)
+  - [Events](#events)
+  - [Logs](#logs)
+  - [Nodes](#nodes)
+  - [Namespaces](#namespaces)
+  - [Pods](#pods)
+  - [ReplicaSets](#replicasets)
+  - [Secrets](#secrets)
+  - [Services](#services)
+  - [Service Accounts](#service-accounts)
+
 ## Output Format & General Options
 
 * ```alias k=kubectl```
