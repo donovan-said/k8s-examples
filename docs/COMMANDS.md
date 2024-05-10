@@ -1,51 +1,116 @@
 # kubectl Commands
 
-## Environment Management
+A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](https://spacelift.io/blog/kubernetes-cheat-sheet#events).
+
+## Environment Management & Context
 
 Checking and setting which environment kubectl is pointing to:
 
+* ```kubectl get all --all-namespaces```
+* ```kubectl cluster-info```
+* ```kubectl version```
+* ```kubectl config view```
+* ```kubectl config view -o jsonpath='{.users[*].name}```
+* ```kubectl config current-context```
 * ```kubectl config get-contexts```
 * ```kubectl config use-context docker-desktop``` (or whatever environment you want to use)
+* ```kubectl api-resources```
+* ```kubectl api-versions```
 
-## Object Management
+## Output Format
+
+* ```-o=json, e.g. kubectl get pods -o=json```
+* ```-o=yaml, e.g. kubectl get pods -o=yaml```
+* ```-o=wide, e.g. kubectl get pods -o=wide```
+
+## Namespaces
+
+* ```-n, e.g. kubectl get pods -n={namespace_name}```
+
+## Configuration Files
 
 ### apply
 
-* ```kubectl apply -f manifest.yml```
-* ```kubectl apply -f deployment.yaml -f service.yml ```
+* ```kubectl apply -f {config_file}```
+* ```kubectl apply -f {config_file_2} -f {config_file_2}```
 
+### create
 
-### get
-
-* ```kubectl get pod -n {namespace}```
-* ```kubectl get deployments -n {namespace}```
-* ```kubectl get cronjobs -n {namespace}```
-* ```kubectl get sa -n {namespace}```
-
-### describe
-
-* ```kubectl describe pods {pod_name} -n {namespace}```
-* ```kubectl describe sa k8s-password-management-sa -n {namespace}```
+* ```kubectl create -f {config_file}```
+* ```kubectl create -f {config_file_directory}```
+* ```kubectl create -f {url}```
 
 ### delete
 
-* ```kubectl delete pod {pod_name} -n {namespace} ```
-* ```kubectl delete deployments {deployment_name} -n {namespace}```
-* ```kubectl delete service demo-hello-world-service -n {namespace}```
-* ```kubectl delete cronjob {cronjob-name}```
+* ```kubectl delete -f {configuration_file}```
+
+## Deployments
+
+### get
+
+* ```kubectl get deployments```
+
+### edit
+
+* ```kubectl edit deployment {deployment_name}```
+
+### create
+
+* ```kubectl create deployment {deployment_name}```
+
+### delete
+
+* ```kubectl delete deployments {deployment_name}```
 
 ### rollout
 
-* ```kubectl rollout restart deployment {deployment_name} -n {namespace}```
+* ```kubectl rollout status deployment {deployment_name}```
+* ```kubectl rollout undo deployment/{deployment_name}```
+* ```kubectl rollout restart deployment {deployment_name}```
 
-### logs
+### replace
 
-* ```kubectl logs {pod_name} -c {container layer} -n {namespace} ```
+* ```kubectl replace --force -f {configuration_file}```
 
+## Pods
+
+* ```kubectl get pod```
+* ```kubectl describe pods {pod_name}```
+* ```kubectl delete pod {pod_name} ```
+
+## CronJons
+
+### get
+
+* ```kubectl get cronjobs```
+
+### delete
+
+* ```kubectl delete cronjob {cronjob-name}```
+
+## Service Accounts
+
+### get
+
+* ```kubectl get sa```
+
+### describe
+
+* ```kubectl describe sa k8s-password-management-sa```
+
+## Services
+
+### delete
+
+* ```kubectl delete service demo-hello-world-service```
+
+## Logs
+
+* ```kubectl logs {pod_name} -c {container layer} ```
 
 ## Container Exec
 
-* ```kubectl exec -it {pod_name} -c {container layer} -n {namespace} -- sh```
+* ```kubectl exec -it {pod_name} -c {container layer} -- sh```
 
 
 
