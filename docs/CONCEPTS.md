@@ -8,6 +8,8 @@
 
 ## Kubeconfig
 
+The default path for the kubeconf file is ```$HOME/.kube/config```.
+
 * [k8s Docs - Organizing Cluster Access Using kubeconfig Files](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
 * [Medium Article by Claire Lee - Kubeconfig](https://yuminlee2.medium.com/kubernetes-kubeconfig-file-4aabe3b04ade#4890)
 

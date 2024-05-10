@@ -17,6 +17,15 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.2.0]
+
+### Added
+
+* Example config file
+* Expanded documentation to cover commonly used commands and k8 concepts
+
+# CHANGELOG
+
 ## [0.1.0]
 
 ### Added

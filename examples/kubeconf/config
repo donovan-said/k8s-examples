@@ -2,13 +2,48 @@ apiVersion: v1
 kind: Config
 
 clusters:
-- cluster:
-    server: https://k8s.example.org/k8s/clusters/c-xxyyzz
-  name: development
-
-users:
-- name: developer
+- name: production
+  cluster:
+    server: https://production.example.com
+    certificate-authority: /path/to/production/ca.crt
+- name: development
+  cluster:
+    server: https://development.example.com
+    certificate-authority: /path/to/development/ca.crt
+- name: test
+  cluster:
+    server: https://test.example.com
+    certificate-authority: /path/to/test/ca.crt
 
 contexts:
-- context:
-  name: development
+- name: production
+  context:
+    cluster: production
+    user: prod-user
+    namespace: <desired_namespace> # Default namespace for context
+- name: development
+  context:
+    cluster: development
+    user: dev-user
+    namespace: <desired_namespace> # Default namespace for context
+- name: test
+  context:
+    cluster: test
+    user: test-user
+    namespace: <desired_namespace> # Default namespace for context
+
+current-context: production
+
+users:
+- name: prod-user
+  user:
+    client-certificate: /path/to/production/prod-user.crt
+    client-key: /path/to/production/prod-user.key
+- name: dev-user
+  user:
+    client-certificate: /path/to/development/dev-user.crt
+    client-key: /path/to/development/dev-user.key
+- name: test-user
+  user:
+    client-certificate: /path/to/test/test-user.crt
+    client-key: /path/to/test/test-user.key
