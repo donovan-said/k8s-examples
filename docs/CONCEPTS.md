@@ -2,6 +2,9 @@
 
 - [Concepts](#concepts)
   - [Cluster Architecture](#cluster-architecture)
+    - [Kubernetes Components](#kubernetes-components)
+      - [Control Plane](#control-plane)
+      - [Node](#node)
   - [Kubeconfig](#kubeconfig)
   - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
   - [Load Balancing](#load-balancing)
@@ -12,6 +15,23 @@
 * [k8s Docs - Cluster Architecture](https://kubernetes.io/docs/concepts/architecture/)
 * [k8s Docs - Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/)
 * [k8s Docs - Nodes and the Control Plane Communication](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/)
+
+### Kubernetes Components
+
+Detailed information can be found [here](https://kubernetes.io/docs/concepts/overview/components/).
+
+#### Control Plane
+
+* etcd
+* API Server aka api
+* Controller Manager aka c-m
+* Cloud Controller Manager aka c-c-m (Optional)
+* Scheduler aka sched
+
+#### Node
+
+* kubelet
+* kube-proxy aka k-proxy
 
 ## Kubeconfig
 
