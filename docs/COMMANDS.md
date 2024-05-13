@@ -15,6 +15,7 @@ A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](
   - [Namespaces](#namespaces)
   - [Pods](#pods)
   - [ReplicaSets](#replicasets)
+  - [Roles \& Role Bondings](#roles--role-bondings)
   - [Secrets](#secrets)
   - [Services](#services)
   - [Service Accounts](#service-accounts)
@@ -51,6 +52,10 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl config use-context docker-desktop``` (or whatever environment you want to use)
 * ```kubectl api-resources```
 * ```kubectl api-versions```
+* ```kubectl get configmaps```
+* ```kubectl describe configmap {configmap_name}```
+* ```kubectl get configmap {configmap_name} -o jsonpath='{.data}' | jq``` (Get ConfigMap JSON object)
+* ```kubectl delete configmap {configmap_name}```
 
 ## Cronjobs
 
@@ -135,12 +140,22 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl get pods --show-labels```
 * ```kubectl port-forward {pod_name} <port number to listen on>:<port number to forward to>```
 
-
 ## ReplicaSets
 
 * ```kubectl get replicasets```
 * ```kubectl describe replicasets {replicaset_name}```
 * ```kubectl kubectl scale --replicas=[x]```
+
+## Roles & Role Bondings
+
+* ```kubectl get clusterroles```
+* ```kubectl describe clusterroles```
+* ```kubectl get clusterrolebindings```
+* ```kubectl describe clusterrolebindings```
+* ```kubectl get roles```
+* ```kubectl describe roles```
+* ```kubectl get rolebindings```
+* ```kubectl describe rolebindings```
 
 ## Secrets
 

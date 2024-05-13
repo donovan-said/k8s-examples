@@ -5,16 +5,19 @@
     - [Kubernetes Components](#kubernetes-components)
       - [Control Plane](#control-plane)
       - [Node](#node)
-  - [Kubeconfig](#kubeconfig)
+  - [Configuration](#configuration)
+    - [ConfigMap](#configmap)
+    - [Secrets](#secrets)
+    - [Kubeconfig](#kubeconfig)
   - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
+  - [RBAC](#rbac)
   - [Load Balancing](#load-balancing)
   - [Cloud K8s Services](#cloud-k8s-services)
+  - [Troubleshooting](#troubleshooting)
 
 ## Cluster Architecture
 
 * [k8s Docs - Cluster Architecture](https://kubernetes.io/docs/concepts/architecture/)
-* [k8s Docs - Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/)
-* [k8s Docs - Nodes and the Control Plane Communication](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/)
 
 ### Kubernetes Components
 
@@ -33,7 +36,17 @@ Detailed information can be found [here](https://kubernetes.io/docs/concepts/ove
 * kubelet
 * kube-proxy aka k-proxy
 
-## Kubeconfig
+## Configuration
+
+### ConfigMap
+
+* [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
+
+### Secrets
+
+* [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
+
+### Kubeconfig
 
 The default path for the kubeconf file is ```$HOME/.kube/config```.
 
@@ -45,12 +58,22 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Imperative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/)
 * [k8s Docs - Declarative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/)
 
+## RBAC
+
+* [k8s Docs - User Accounts Vs Service Accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#user-accounts-versus-service-accounts)
+* [k8s Docs - Request Verbs](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#determine-the-request-verb)
+* [Hack Tricks Cloud - Kubernetes Role-Based Access Control(RBAC)](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security/kubernetes-role-based-access-control-rbac)
+
 ## Load Balancing
 
 * [k8s Docs - Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing)
 
 ## Cloud K8s Services 
 
-* AWS EKS (Elastic Kubernetes Service)
-* GCP GKE (Google Kubernetes Engine)
-* Azure AKS (Azure Kubernetets Service)
+* [AWS EKS (Elastic Kubernetes Service)](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
+* [GCP GKE (Google Kubernetes Engine)](https://cloud.google.com/kubernetes-engine)
+* [Azure AKS (Azure Kubernetets Service)](https://azure.microsoft.com/en-us/products/kubernetes-service)
+
+## Troubleshooting
+
+* [Troubleshooting Applications](https://kubernetes.io/docs/tasks/debug/debug-application/)

@@ -14,9 +14,17 @@ spec:
         app: demo-hello-world
         version: 2.0.0
     spec:
+      serviceAccountName: sampleserviceaccount
       containers:
         - name: demo-hello-world
           image: "gcr.io/google-samples/hello-app:2.0"
-          env:
-            - name: "PORT"
-              value: "50001"
+          envFrom:
+            - configMapRef:
+                name: sample-config
+          volumeMounts:
+            - name: secret-volume
+              mountPath: /etc/config/secret
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: sample-secrete
