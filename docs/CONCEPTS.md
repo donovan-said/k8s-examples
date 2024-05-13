@@ -10,6 +10,7 @@
     - [Secrets](#secrets)
     - [Kubeconfig](#kubeconfig)
   - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
+  - [RBAC](#rbac)
   - [Load Balancing](#load-balancing)
   - [Cloud K8s Services](#cloud-k8s-services)
   - [Troubleshooting](#troubleshooting)
@@ -56,6 +57,10 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 * [k8s Docs - Imperative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/)
 * [k8s Docs - Declarative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/)
+
+## RBAC
+
+* [k8s Docs - Request Verbs](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#determine-the-request-verb)
 
 ## Load Balancing
 
