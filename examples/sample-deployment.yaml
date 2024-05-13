@@ -14,6 +14,7 @@ spec:
         app: demo-hello-world
         version: 2.0.0
     spec:
+      serviceAccountName: sampleserviceaccount
       containers:
         - name: demo-hello-world
           image: "gcr.io/google-samples/hello-app:2.0"

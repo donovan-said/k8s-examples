@@ -12,6 +12,7 @@
   - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
   - [Load Balancing](#load-balancing)
   - [Cloud K8s Services](#cloud-k8s-services)
+  - [Troubleshooting](#troubleshooting)
 
 ## Cluster Architecture
 
@@ -62,6 +63,10 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ## Cloud K8s Services 
 
-* AWS EKS (Elastic Kubernetes Service)
-* GCP GKE (Google Kubernetes Engine)
-* Azure AKS (Azure Kubernetets Service)
+* [AWS EKS (Elastic Kubernetes Service)](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
+* [GCP GKE (Google Kubernetes Engine)](https://cloud.google.com/kubernetes-engine)
+* [Azure AKS (Azure Kubernetets Service)](https://azure.microsoft.com/en-us/products/kubernetes-service)
+
+## Troubleshooting
+
+* [Troubleshooting Applications](https://kubernetes.io/docs/tasks/debug/debug-application/)
