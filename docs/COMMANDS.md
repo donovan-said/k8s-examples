@@ -139,7 +139,6 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl get pods --show-labels```
 * ```kubectl port-forward {pod_name} <port number to listen on>:<port number to forward to>```
 
-
 ## ReplicaSets
 
 * ```kubectl get replicasets```

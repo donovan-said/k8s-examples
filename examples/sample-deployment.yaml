@@ -20,6 +20,10 @@ spec:
           envFrom:
             - configMapRef:
                 name: sample-config
-          # env:
-          #   - name: "PORT"
-          #     value: "50001"
+          volumeMounts:
+            - name: secret-volume
+              mountPath: /etc/config/secret
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: sample-secrete

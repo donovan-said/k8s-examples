@@ -5,7 +5,10 @@
     - [Kubernetes Components](#kubernetes-components)
       - [Control Plane](#control-plane)
       - [Node](#node)
-  - [Kubeconfig](#kubeconfig)
+  - [Configuration](#configuration)
+    - [ConfigMap](#configmap)
+    - [Secrets](#secrets)
+    - [Kubeconfig](#kubeconfig)
   - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
   - [Load Balancing](#load-balancing)
   - [Cloud K8s Services](#cloud-k8s-services)
@@ -13,8 +16,6 @@
 ## Cluster Architecture
 
 * [k8s Docs - Cluster Architecture](https://kubernetes.io/docs/concepts/architecture/)
-* [k8s Docs - Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/)
-* [k8s Docs - Nodes and the Control Plane Communication](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/)
 
 ### Kubernetes Components
 
@@ -33,7 +34,17 @@ Detailed information can be found [here](https://kubernetes.io/docs/concepts/ove
 * kubelet
 * kube-proxy aka k-proxy
 
-## Kubeconfig
+## Configuration
+
+### ConfigMap
+
+* [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
+
+### Secrets
+
+* [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
+
+### Kubeconfig
 
 The default path for the kubeconf file is ```$HOME/.kube/config```.
 

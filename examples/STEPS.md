@@ -7,18 +7,21 @@ Based on guide by [Sayed Naweed Rizvi - Setup local Kubernetes cluster with Dock
 ```shell
 kubectl create namespace sample-namespace
 kubectl apply -f examples/sample-config-map.yaml -n sample-namespace 
-kubectl apply -f examples/sample-deployment.yml -n sample-namespace 
-kubectl apply -f examples/sample-service.yml -n sample-namespace 
+kubectl apply -f examples/sample-secrets.yaml -n sample-namespace 
+kubectl apply -f examples/sample-deployment.yaml -n sample-namespace 
+kubectl apply -f examples/sample-service.yaml -n sample-namespace 
 ```
 
 ## Validate
 
 ```shell
 kubectl get namespaces 
-kubectl get configmaps -n sample-namespace                          
-kubectl get deployments -n sample-namespace 
+kubectl get configmaps -n sample-namespace
+kubectl get secrets -n sample-namespace
+kubectl describe secrets sample-secrete -n sample-namespace                        
+kubectl get deployments -n sample-namespace  
+kubectl get service -n sample-namespace
 kubectl get pods -n sample-namespace 
-kubectl get service -n sample-namespace 
 ```
 
 * Visit: http://localhost:32000/
@@ -29,5 +32,6 @@ kubectl get service -n sample-namespace
 kubectl delete service demo-hello-world-service -n sample-namespace 
 kubectl delete deployment demo-hello-world -n sample-namespace 
 kubectl delete configmap sample-config -n sample-namespace 
+kubectl delete secret secret-basic-auth -n sample-namespace 
 kubectl delete namespace sample-namespace
 ```
