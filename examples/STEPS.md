@@ -6,9 +6,9 @@ Based on guide by [Sayed Naweed Rizvi - Setup local Kubernetes cluster with Dock
 
 ```shell
 kubectl create namespace sample-namespace
-kubectl apply -f examples/configmap/sample-config-map.yaml -n sample-namespace 
-kubectl apply -f examples/docker-desktop-k8s-sample-app/deployment.yml -n sample-namespace 
-kubectl apply -f examples/docker-desktop-k8s-sample-app/service.yml -n sample-namespace 
+kubectl apply -f examples/sample-config-map.yaml -n sample-namespace 
+kubectl apply -f examples/sample-deployment.yml -n sample-namespace 
+kubectl apply -f examples/sample-service.yml -n sample-namespace 
 ```
 
 ## Validate
