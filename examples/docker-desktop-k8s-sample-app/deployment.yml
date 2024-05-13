@@ -17,6 +17,9 @@ spec:
       containers:
         - name: demo-hello-world
           image: "gcr.io/google-samples/hello-app:2.0"
-          env:
-            - name: "PORT"
-              value: "50001"
+          envFrom:
+            - configMapRef:
+                name: sample-config
+          # env:
+          #   - name: "PORT"
+          #     value: "50001"

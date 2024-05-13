@@ -51,6 +51,10 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl config use-context docker-desktop``` (or whatever environment you want to use)
 * ```kubectl api-resources```
 * ```kubectl api-versions```
+* ```kubectl get configmaps```
+* ```kubectl describe configmap {configmap_name}```
+* ```kubectl get configmap {configmap_name} -o jsonpath='{.data}' | jq``` (Get ConfigMap JSON object)
+* ```kubectl delete configmap {configmap_name}```
 
 ## Cronjobs
 
