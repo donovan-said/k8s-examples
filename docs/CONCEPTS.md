@@ -62,6 +62,7 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 * [k8s Docs - User Accounts Vs Service Accounts](https://kubernetes.io/docs/reference/access-authn-authz/service-accounts-admin/#user-accounts-versus-service-accounts)
 * [k8s Docs - Request Verbs](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#determine-the-request-verb)
+* [Hack Tricks Cloud - Kubernetes Role-Based Access Control(RBAC)](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security/kubernetes-role-based-access-control-rbac)
 
 ## Load Balancing
 

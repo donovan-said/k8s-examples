@@ -15,6 +15,7 @@ A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](
   - [Namespaces](#namespaces)
   - [Pods](#pods)
   - [ReplicaSets](#replicasets)
+  - [Roles \& Role Bondings](#roles--role-bondings)
   - [Secrets](#secrets)
   - [Services](#services)
   - [Service Accounts](#service-accounts)
@@ -144,6 +145,17 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl get replicasets```
 * ```kubectl describe replicasets {replicaset_name}```
 * ```kubectl kubectl scale --replicas=[x]```
+
+## Roles & Role Bondings
+
+* ```kubectl get clusterroles```
+* ```kubectl describe clusterroles```
+* ```kubectl get clusterrolebindings```
+* ```kubectl describe clusterrolebindings```
+* ```kubectl get roles```
+* ```kubectl describe roles```
+* ```kubectl get rolebindings```
+* ```kubectl describe rolebindings```
 
 ## Secrets
 
