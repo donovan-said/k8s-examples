@@ -42,6 +42,7 @@ A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](
 
 Checking and setting which environment kubectl is pointing to:
 
+* ```kubectl explain {object_type}```
 * ```kubectl get all --all-namespaces```
 * ```kubectl cluster-info```
 * ```kubectl version```
