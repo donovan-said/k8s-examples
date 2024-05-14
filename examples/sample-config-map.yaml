@@ -2,6 +2,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: sample-config
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
 data:
   database_host: "192.168.0.1"
   debug_mode: "1"

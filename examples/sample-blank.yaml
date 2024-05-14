@@ -1,0 +1,9 @@
+apiVersion: value # Full list found via kubectl api-resources 
+kind: value # Full list found via kubectl api-resources 
+metadata:
+  name: value
+  namespace: value
+  labels:
+    key: value
+  annotations:
+    key: value
