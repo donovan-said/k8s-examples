@@ -3,7 +3,9 @@
 The purpose of this repository is to act as a collation of useful information 
 relating to k8s, such as commands, config files, and manifest file. 
 
-<center><img src="./imgs/k8s_logo.png" width="350" height="300"></center>
+<p align="center">
+    <img src="./imgs/k8s_logo.png" width="350" height="300">
+</p>
 
 ## Sample Application
 
