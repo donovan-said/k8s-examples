@@ -17,6 +17,16 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.5.0]
+
+### Added
+
+* Grafan deployment based on the official Grafana guide
+
+### Changed
+
+* Moved the sample application into its own folder
+
 ## [0.4.0]
 
 ### Changed

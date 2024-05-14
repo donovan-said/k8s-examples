@@ -8,12 +8,12 @@ Based on guides by:
 ## Deployment
 
 ```shell
-kubectl apply -f examples/sample-namespace.yaml -n sample-namespace
-kubectl apply -f examples/sample-service-account.yaml -n sample-namespace 
-kubectl apply -f examples/sample-config-map.yaml -n sample-namespace 
-kubectl apply -f examples/sample-secrets.yaml -n sample-namespace 
-kubectl apply -f examples/sample-deployment.yaml -n sample-namespace 
-kubectl apply -f examples/sample-service.yaml -n sample-namespace 
+kubectl apply -f examples/sample-app/sample-namespace.yaml
+kubectl apply -f examples/sample-app/sample-service-account.yaml -n sample-namespace 
+kubectl apply -f examples/sample-app/sample-config-map.yaml -n sample-namespace 
+kubectl apply -f examples/sample-app/sample-secrets.yaml -n sample-namespace 
+kubectl apply -f examples/sample-app/sample-deployment.yaml -n sample-namespace 
+kubectl apply -f examples/sample-app/sample-service.yaml -n sample-namespace 
 ```
 
 ## Validate
