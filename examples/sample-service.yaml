@@ -9,6 +9,8 @@ metadata:
     app.kubernetes.io/component: application
     app.kubernetes.io/part-of: sample-application
     app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
 spec:
   type: NodePort
   selector:

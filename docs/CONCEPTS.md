@@ -57,6 +57,7 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 ## Object Management
 
 * [k8s Docs - Recommended Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
+* [K8s Docs - Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 
 ## Imperative Vs Declarative Management
 
