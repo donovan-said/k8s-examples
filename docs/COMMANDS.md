@@ -50,8 +50,8 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl config current-context```
 * ```kubectl config get-contexts```
 * ```kubectl config use-context docker-desktop``` (or whatever environment you want to use)
-* ```kubectl api-resources```
-* ```kubectl api-versions```
+* ```kubectl api-resources``` (A list of all object types: name, shortname, api version, namespaced, kind)
+* ```kubectl api-versions``` (A list of all object type api versions)
 * ```kubectl get configmaps```
 * ```kubectl describe configmap {configmap_name}```
 * ```kubectl get configmap {configmap_name} -o jsonpath='{.data}' | jq``` (Get ConfigMap JSON object)

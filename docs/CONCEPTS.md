@@ -9,6 +9,7 @@
     - [ConfigMap](#configmap)
     - [Secrets](#secrets)
     - [Kubeconfig](#kubeconfig)
+  - [Object Management](#object-management)
   - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
   - [RBAC](#rbac)
   - [Load Balancing](#load-balancing)
@@ -52,6 +53,10 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 * [k8s Docs - Organizing Cluster Access Using kubeconfig Files](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
 * [Medium Article by Claire Lee - Kubeconfig](https://yuminlee2.medium.com/kubernetes-kubeconfig-file-4aabe3b04ade#4890)
+
+## Object Management
+
+* [k8s Docs - Recommended Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
 
 ## Imperative Vs Declarative Management
 

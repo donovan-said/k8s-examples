@@ -2,6 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-hello-world
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
 spec:
   selector:
     matchLabels:
