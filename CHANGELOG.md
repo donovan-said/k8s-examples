@@ -17,6 +17,12 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.4.0]
+
+### Changed
+
+* Updated samples to include labels and annotations
+
 ## [0.3.0]
 
 ### Changed
