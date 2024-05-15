@@ -17,6 +17,16 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.6.0]
+
+### Added
+
+* Nginx deployment example
+
+### Changed
+
+* Restructured repo so that kubconf examples are stored in a separate folder
+
 ## [0.5.0]
 
 ### Added
