@@ -4,6 +4,7 @@
   - [Cluster Architecture](#cluster-architecture)
     - [Kubernetes Components](#kubernetes-components)
   - [Configuration](#configuration)
+    - [ConfigMaps \& Secrets](#configmaps--secrets)
     - [Kubeconfig](#kubeconfig)
   - [Object Management](#object-management)
     - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
@@ -34,6 +35,8 @@ Detailed information can be found [here](https://kubernetes.io/docs/concepts/ove
 | kube-proxy aka k-proxy                        | Node              |                   |
 
 ## Configuration
+
+### ConfigMaps & Secrets
 
 * [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
 * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
@@ -70,6 +73,8 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ## Services, Load Balancing, and Networking
 
+* [k8s Docs - Use a Service to Access an Application in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
+* [k8s Docs - Service Configuratio File](https://kubernetes.io/docs/concepts/services-networking/service/)
 * [k8s Docs - Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing)
 
 ## Scheduling, Preemption and Eviction
