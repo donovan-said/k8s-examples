@@ -25,7 +25,7 @@ __Reference__:
 
 ### Changed
 
-* Restructured repo so that kubconf examples are stored in a separate folder
+* Restructured repo so that kubeconf examples are stored in a separate folder
 
 ## [0.5.0]
 
