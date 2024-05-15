@@ -3,16 +3,16 @@
 - [Concepts](#concepts)
   - [Cluster Architecture](#cluster-architecture)
     - [Kubernetes Components](#kubernetes-components)
-      - [Control Plane](#control-plane)
-      - [Node](#node)
   - [Configuration](#configuration)
     - [ConfigMap](#configmap)
     - [Secrets](#secrets)
     - [Kubeconfig](#kubeconfig)
   - [Object Management](#object-management)
+    - [Configure Pods and Containers](#configure-pods-and-containers)
   - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
   - [RBAC](#rbac)
-  - [Load Balancing](#load-balancing)
+  - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
+  - [Scheduling, Preemption and Eviction](#scheduling-preemption-and-eviction)
   - [Cloud K8s Services](#cloud-k8s-services)
   - [Troubleshooting](#troubleshooting)
 
@@ -24,18 +24,15 @@
 
 Detailed information can be found [here](https://kubernetes.io/docs/concepts/overview/components/).
 
-#### Control Plane
-
-* etcd
-* API Server aka api
-* Controller Manager aka c-m
-* Cloud Controller Manager aka c-c-m (Optional)
-* Scheduler aka sched
-
-#### Node
-
-* kubelet
-* kube-proxy aka k-proxy
+| Name                                          | Cluster Component | Cluster Component |
+| --------------------------------------------- | ----------------- | ----------------- |
+| etcd                                          | Control Plane     |                   |
+| API Server aka api                            | Control Plane     |                   |
+| Controller Manager aka c-m                    | Control Plane     |                   |
+| Cloud Controller Manager aka c-c-m (Optional) | Control Plane     |                   |
+| Scheduler aka sched                           | Control Plane     |                   |
+| kubelet                                       | Node              |                   |
+| kube-proxy aka k-proxy                        | Node              |                   |
 
 ## Configuration
 
@@ -56,8 +53,13 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ## Object Management
 
+* [Jack Dwyer - Kubernetes Deployment Vs Pod:](https://zeet.co/blog/kubernetes-deployment-vs-pod#what-is-a-kubernetes-deployment)
 * [k8s Docs - Recommended Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
 * [K8s Docs - Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+### Configure Pods and Containers
+
+* [k8s Docs - Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 ## Imperative Vs Declarative Management
 
@@ -70,9 +72,13 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Request Verbs](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#determine-the-request-verb)
 * [Hack Tricks Cloud - Kubernetes Role-Based Access Control(RBAC)](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security/kubernetes-role-based-access-control-rbac)
 
-## Load Balancing
+## Services, Load Balancing, and Networking
 
 * [k8s Docs - Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing)
+
+## Scheduling, Preemption and Eviction
+
+* [k8s Docs - Pod Topology Spread Constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/)
 
 ## Cloud K8s Services 
 

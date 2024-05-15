@@ -33,6 +33,24 @@ spec:
           volumeMounts:
             - name: secret-volume
               mountPath: /etc/config/secret
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 50001
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 50001
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 1
+            successThreshold: 1
+            failureThreshold: 3
       volumes:
         - name: secret-volume
           secret:
