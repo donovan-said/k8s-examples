@@ -4,12 +4,11 @@
   - [Cluster Architecture](#cluster-architecture)
     - [Kubernetes Components](#kubernetes-components)
   - [Configuration](#configuration)
-    - [ConfigMap](#configmap)
-    - [Secrets](#secrets)
     - [Kubeconfig](#kubeconfig)
   - [Object Management](#object-management)
-    - [Configure Pods and Containers](#configure-pods-and-containers)
-  - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
+    - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
+    - [Labels \& Annotations](#labels--annotations)
+    - [Configure Pods, Containers \& Deployments](#configure-pods-containers--deployments)
   - [RBAC](#rbac)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
   - [Scheduling, Preemption and Eviction](#scheduling-preemption-and-eviction)
@@ -25,7 +24,7 @@
 Detailed information can be found [here](https://kubernetes.io/docs/concepts/overview/components/).
 
 | Name                                          | Cluster Component | Cluster Component |
-| --------------------------------------------- | ----------------- | ----------------- |
+| :--------------------------------------------- | :----------------- | :----------------- |
 | etcd                                          | Control Plane     |                   |
 | API Server aka api                            | Control Plane     |                   |
 | Controller Manager aka c-m                    | Control Plane     |                   |
@@ -36,12 +35,7 @@ Detailed information can be found [here](https://kubernetes.io/docs/concepts/ove
 
 ## Configuration
 
-### ConfigMap
-
 * [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
-
-### Secrets
-
 * [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 
 ### Kubeconfig
@@ -53,18 +47,20 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ## Object Management
 
-* [Jack Dwyer - Kubernetes Deployment Vs Pod:](https://zeet.co/blog/kubernetes-deployment-vs-pod#what-is-a-kubernetes-deployment)
-* [k8s Docs - Recommended Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
-* [K8s Docs - Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
-
-### Configure Pods and Containers
-
-* [k8s Docs - Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
-
-## Imperative Vs Declarative Management
+### Imperative Vs Declarative Management
 
 * [k8s Docs - Imperative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/)
 * [k8s Docs - Declarative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/)
+
+### Labels & Annotations
+
+* [k8s Docs - Recommended Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
+* [K8s Docs - Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+
+### Configure Pods, Containers & Deployments
+
+* [Jack Dwyer - Kubernetes Deployment Vs Pod:](https://zeet.co/blog/kubernetes-deployment-vs-pod#what-is-a-kubernetes-deployment)
+* [k8s Docs - Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
 ## RBAC
 
