@@ -5,8 +5,8 @@ Based on [Grafan Docs - Deploy Grafana on Kubernetes Guide](https://grafana.com/
 ## Deployment
 
 ```shell
-kubectl apply -f examples/grafana/grafana-namespace.yaml
-kubectl apply -f examples/grafana/grafana-manifest.yaml -n grafana-namespace 
+kubectl apply -f examples-app/grafana/grafana-namespace.yaml
+kubectl apply -f examples-app/grafana/grafana-manifest.yaml -n grafana-namespace 
 ```
 
 ## Validate
@@ -26,6 +26,6 @@ kubectl get svc -n grafana-namespace  -o wide
 ## Clean Up
 
 ```shell
-kubectl delete -f examples/grafana/grafana-manifest.yaml -n grafana-namespace
-kubectl delete -f examples/grafana/grafana-namespace.yaml
+kubectl delete -f examples-app/grafana/grafana-manifest.yaml -n grafana-namespace
+kubectl delete -f examples-app/grafana/grafana-namespace.yaml
 ```
