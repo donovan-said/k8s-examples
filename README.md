@@ -9,8 +9,8 @@ relating to k8s, such as commands, config files, and manifest file.
 
 ## Example Deployments
 
-* [Example - Sample Application](./examples/)
-* [Example - Grafana](./examples/grafana/)
+* [Example - Sample Application](./examples-app/sample-app/)
+* [Example - Grafana](./examples-app/grafana/)
 
 ## Concepts
 
