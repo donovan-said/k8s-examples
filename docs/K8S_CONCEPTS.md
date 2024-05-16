@@ -1,6 +1,6 @@
-# Concepts
+# K8s Concepts
 
-- [Concepts](#concepts)
+- [K8s Concepts](#k8s-concepts)
   - [Cluster Architecture](#cluster-architecture)
     - [Kubernetes Components](#kubernetes-components)
   - [Configuration](#configuration)
