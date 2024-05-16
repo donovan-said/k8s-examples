@@ -1,7 +1,7 @@
 # Helm Concepts
 
 <p align="center">
-    <img src="./imgs/helm_logo.png" width="350" height="300">
+    <img src="../imgs/helm_logo.png" width="300" height="300">
 </p>
 
 ## Overview

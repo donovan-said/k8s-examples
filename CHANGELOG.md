@@ -17,6 +17,12 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.8.0]
+
+### Added
+
+* Helm examples and guide
+
 ## [0.7.0]
 
 ### Added
