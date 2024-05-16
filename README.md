@@ -7,13 +7,11 @@ relating to k8s, such as commands, config files, and manifest file.
     <img src="./imgs/k8s_logo.png" width="350" height="300">
 </p>
 
-## Concepts
+## Concepts & Guides
 
-* [Concepts](./docs/CONCEPTS.md).
-
-## kubectl Common Commands
-
-* [kubectl commands](./docs/COMMANDS.md).
+* [K8s Concepts](./docs/K8S_CONCEPTS.md)
+* [kubectl Common Commands](./docs/KUBECTL_COMMANDS.md)
+* [Helm Concepts](./docs/HELM_CONCEPTS.md)
 
 ## Example Cluster Management
 
