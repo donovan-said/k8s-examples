@@ -21,7 +21,7 @@ __Reference__:
 
 ### Added
 
-* K8s Dashbaord exmaple and guide
+* K8s Dashboard exmaple and guide
 
 ### Changed
 
