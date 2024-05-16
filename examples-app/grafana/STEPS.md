@@ -4,28 +4,22 @@ Based on [Grafan Docs - Deploy Grafana on Kubernetes Guide](https://grafana.com/
 
 ## Deployment
 
-```shell
-kubectl apply -f examples-app/grafana/grafana-namespace.yaml
-kubectl apply -f examples-app/grafana/grafana-manifest.yaml -n grafana-namespace 
-```
+* ```kubectl apply -f examples-app/grafana/grafana-namespace.yaml```
+* ```kubectl apply -f examples-app/grafana/grafana-manifest.yaml -n grafana-namespace```
 
 ## Validate
 
-```shell
-kubectl get pvc -n grafana-namespace  -o wide
-kubectl get deployments -n grafana-namespace  -o wide
-kubectl get svc -n grafana-namespace  -o wide
-```
+* ```kubectl get pvc -n grafana-namespace  -o wide```
+* ```kubectl get deployments -n grafana-namespace  -o wide```
+* ```kubectl get svc -n grafana-namespace  -o wide```
 
 ## Access Grafana
 
 * ```kubectl get all --n grafana-namespace ```
 
-* Visit: http://localhost:3000/
+Proceed to access the endpoint [here](http://localhost:3000/)
 
 ## Clean Up
 
-```shell
-kubectl delete -f examples-app/grafana/grafana-manifest.yaml -n grafana-namespace
-kubectl delete -f examples-app/grafana/grafana-namespace.yaml
-```
+* ```kubectl delete -f examples-app/grafana/grafana-manifest.yaml -n grafana-namespace```
+* ```kubectl delete -f examples-app/grafana/grafana-namespace.yaml```

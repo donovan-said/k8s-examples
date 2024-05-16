@@ -11,11 +11,11 @@ kubectl apply -f examples-app/nginx/nginx-manifest.yaml -n nginx
 
 ## Validate
 
-```shell
-kubectl get all -n nginx
+```kubectl get all -n nginx```
 
 or
 
+```shell
 kubectl get namespaces                    
 kubectl get deployments -n nginx 
 kubectl get service -n nginx
