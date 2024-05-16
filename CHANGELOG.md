@@ -17,6 +17,16 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.7.0]
+
+### Added
+
+* K8s Dashboard exmaple and guide
+
+### Changed
+
+* Repo structure to better organise cluster management and applications
+
 ## [0.6.0]
 
 ### Added

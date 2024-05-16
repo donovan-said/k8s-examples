@@ -14,6 +14,9 @@
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
   - [Scheduling, Preemption and Eviction](#scheduling-preemption-and-eviction)
   - [Cloud K8s Services](#cloud-k8s-services)
+  - [Extending Kubernetes](#extending-kubernetes)
+    - [Custom Resources](#custom-resources)
+    - [Istio and Envoy](#istio-and-envoy)
   - [Troubleshooting](#troubleshooting)
 
 ## Cluster Architecture
@@ -24,15 +27,16 @@
 
 Detailed information can be found [here](https://kubernetes.io/docs/concepts/overview/components/).
 
-| Name                                          | Cluster Component | Cluster Component |
-| :--------------------------------------------- | :----------------- | :----------------- |
-| etcd                                          | Control Plane     |                   |
-| API Server aka api                            | Control Plane     |                   |
-| Controller Manager aka c-m                    | Control Plane     |                   |
-| Cloud Controller Manager aka c-c-m (Optional) | Control Plane     |                   |
-| Scheduler aka sched                           | Control Plane     |                   |
-| kubelet                                       | Node              |                   |
-| kube-proxy aka k-proxy                        | Node              |                   |
+| Name                                                                                                      | Short Name | Cluster Component |
+| :-------------------------------------------------------------------------------------------------------- | :--------- | :---------------- |
+| [etcd](https://etcd.io/docs/)                                                                             | n/a        | Control Plane     |
+| [API Server](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/)           | api        | Control Plane     |
+| [Controller Manager](https://kubernetes.io/docs/concepts/architecture/controller/)                        | c-m        | Control Plane     |
+| [Cloud Controller Manager (Optional)](https://kubernetes.io/docs/concepts/architecture/cloud-controller/) | c-c-m      | Control Plane     |
+| [Scheduler](https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/)                      | sched      | Control Plane     |
+| [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)                     | n/a        | Node              |
+| [kube-proxy](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/)               | k-proxy    | Node              |
+| [Container runtime interface](https://kubernetes.io/docs/concepts/architecture/cri/)                      | n/a        | Node              |
 
 ## Configuration
 
@@ -86,6 +90,17 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [AWS EKS (Elastic Kubernetes Service)](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
 * [GCP GKE (Google Kubernetes Engine)](https://cloud.google.com/kubernetes-engine)
 * [Azure AKS (Azure Kubernetets Service)](https://azure.microsoft.com/en-us/products/kubernetes-service)
+
+## Extending Kubernetes
+
+### Custom Resources
+
+* [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
+
+### Istio and Envoy
+
+* [Istio Docs - Architecture](https://istio.io/latest/docs/ops/deployment/architecture/)
+* [Envoy Docs](https://www.envoyproxy.io/)
 
 ## Troubleshooting
 

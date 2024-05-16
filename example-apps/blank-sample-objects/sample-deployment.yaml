@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {VALUE}
+  labels:
+    app.kubernetes.io/name: {VALUE}
+    app.kubernetes.io/instance: {VALUE}
+    app.kubernetes.io/version: {VALUE}
+    app.kubernetes.io/component: {VALUE}
+    app.kubernetes.io/part-of: {VALUE}
+    app.kubernetes.io/managed-by: {VALUE}
+  annotations:
+    key: {VALUE}
+spec:
+  selector:
+    matchLabels:
+      app: {VALUE}
+      version: {VALUE}
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: {VALUE}
+        version: {VALUE}
+    spec:
+      serviceAccountName: {VALUE}
+      containers:
+        - name: {VALUE}
+          image: {VALUE}
+          envFrom:
+            - configMapRef:
+                name: {VALUE}
+          volumeMounts:
+            - name: {VALUE}
+              mountPath: {VALUE}
+          readinessProbe:
+            httpGet:
+              path: /
+              port: {VALUE}
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {VALUE}
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 1
+            successThreshold: 1
+            failureThreshold: 3
+      volumes:
+        - name: {VALUE}
+          secret:
+            secretName: {VALUE}

@@ -6,6 +6,7 @@ A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](
   - [Output Format \& General Options](#output-format--general-options)
   - [Configuration Files (Manifests)](#configuration-files-manifests)
   - [Cluster Management \& Context](#cluster-management--context)
+  - [Proxy](#proxy)
   - [Cronjobs](#cronjobs)
   - [DaemonSets](#daemonsets)
   - [Deployments](#deployments)
@@ -57,6 +58,10 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl describe configmap {configmap_name}```
 * ```kubectl get configmap {configmap_name} -o jsonpath='{.data}' | jq``` (Get ConfigMap JSON object)
 * ```kubectl delete configmap {configmap_name}```
+
+## Proxy
+
+* ```kubectl proxy```
 
 ## Cronjobs
 
