@@ -9,11 +9,11 @@ relating to k8s, such as commands, config files, and manifest file.
 
 ## Concepts
 
-Please see [Concepts](./docs/CONCEPTS.md).
+* [Concepts](./docs/CONCEPTS.md).
 
 ## kubectl Common Commands
 
-Please see [kubectl commands](./docs/COMMANDS.md).
+* [kubectl commands](./docs/COMMANDS.md).
 
 ## Example Cluster Management
 

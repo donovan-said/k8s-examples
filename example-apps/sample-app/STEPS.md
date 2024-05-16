@@ -24,4 +24,4 @@ Based on guides by:
 
 ## Clean Up
 
-* ```kubectl delete -f example-apps/sample-app/sample-app-manifest.yaml -n sample-namespace
+* ```kubectl delete -f example-apps/sample-app/sample-app-manifest.yaml -n sample-namespace```
