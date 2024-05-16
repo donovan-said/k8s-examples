@@ -1,0 +1,198 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sample-namespace
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sampleserviceaccount
+  namespace: sample-namespace
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: sample-namespace
+  name: pod-creator
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["create", "get", "watch", "list"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pod-creator
+  namespace: sample-namespace
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: pod-creator
+subjects:
+  - kind: ServiceAccount
+    name: sampleserviceaccount
+    namespace: sample-namespace
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-config
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+data:
+  database_host: "192.168.0.1"
+  debug_mode: "1"
+  log_level: "verbose"
+  PORT: "50001"
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: sample-secrete
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+type: Opaque
+stringData:
+  username: admin # required field for kubernetes.io/basic-auth
+  password: t0p-Secret # required field for kubernetes.io/basic-auth
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-hello-world
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+spec:
+  selector:
+    matchLabels:
+      app: demo-hello-world
+      version: 2.0.0
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: demo-hello-world
+        version: 2.0.0
+    spec:
+      serviceAccountName: sampleserviceaccount
+      containers:
+        - name: demo-hello-world
+          image: "gcr.io/google-samples/hello-app:2.0"
+          envFrom:
+            - configMapRef:
+                name: sample-config
+          volumeMounts:
+            - name: secret-volume
+              mountPath: /etc/config/secret
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 50001
+            initialDelaySeconds: 10
+            periodSeconds: 30
+            timeoutSeconds: 2
+            successThreshold: 1
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 50001
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 1
+            successThreshold: 1
+            failureThreshold: 3
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: sample-secrete
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-hello-world-service
+  labels:
+    app.kubernetes.io/name: sample-application
+    app.kubernetes.io/instance: sample-application-1234
+    app.kubernetes.io/version: "v0.1.0"
+    app.kubernetes.io/component: application
+    app.kubernetes.io/part-of: sample-application
+    app.kubernetes.io/managed-by: manifest-file
+  annotations:
+    sample_annotation_key: sample_annotation_value
+spec:
+  type: NodePort
+  selector:
+    app: demo-hello-world
+    version: 2.0.0
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8081
+      targetPort: 50001
+      nodePort: 32000

@@ -19,11 +19,16 @@ Please see [kubectl commands](./docs/COMMANDS.md).
 
 * [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/)
 
-## Example Deployments
+## Example Applications
 
-* [Sample Application](./examples-app/sample-app/)
-* [Grafana](./examples-app/grafana/)
-* [Nginx](./examples-app/nginx/)
+* [Sample Blank Objects](./example-apps/blank-sample-objects/)
+* [Sample Application](./example-apps/sample-app/)
+* [Grafana](./example-apps/grafana/)
+* [Nginx](./example-apps/nginx/)
+
+## Example Kubeconf
+
+* [Example kubeconf](./example-kubeconf/)
 
 ## Quick Guide to Docs
 
