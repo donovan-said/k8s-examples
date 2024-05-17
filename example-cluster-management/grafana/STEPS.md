@@ -48,7 +48,7 @@
 * ```kubectl delete -f example-cluster-management/grafana/prometheus-service-monitor.yaml```
 * ```kubectl delete -f example-cluster-management/grafana/prometheus-instance.yaml```
 * ```kubectl delete -f example-cluster-management/grafana/prometheus-rbac.yaml```
-* ```kubectl delete -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/bundle.yaml --force-conflicts=true --server-side=true```
+* ```kubectl delete -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/bundle.yaml```
 
 ## Grafana Deployment
 
