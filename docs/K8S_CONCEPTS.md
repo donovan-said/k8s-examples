@@ -115,6 +115,8 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 * [YouTube - TechWorld with Nana - Kubernetes Operator Simply Explained](https://www.youtube.com/watch?v=ha3LjlD6g7g&list=PLy7NrYWoggjw0OMxUDIImjWQjM7qZWn_R)
 * [k8s Docs - Operator Patterns](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
+* [Operator SDK](https://sdk.operatorframework.io/)
+* [GitHub - Operator SKD](https://github.com/operator-framework/operator-sdk)
 
 ### Istio and Envoy
 
