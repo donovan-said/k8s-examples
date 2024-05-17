@@ -28,14 +28,14 @@ relating to k8s, such as commands, config files, and manifest file.
 
 ### Cluster Management
 
-* [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/)
-* [Grafana & Prometheus](./example-cluster-management/grafana/)
+* [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/STEPS.md)
+* [Grafana & Prometheus](./example-cluster-management/grafana/STEPS.md)
 
 ### Applications
 
 * [Sample Blank Objects](./example-apps/blank-sample-objects/)
-* [Sample Application](./example-apps/sample-app/)
-* [Nginx](./example-apps/nginx/)
+* [Sample Application](./example-apps/sample-app/STEPS.md)
+* [Nginx](./example-apps/nginx/STEPS.md)
 
 ### Kubeconf
 

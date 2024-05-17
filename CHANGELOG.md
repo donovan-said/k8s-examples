@@ -17,6 +17,12 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.10.0]
+
+### Changed
+
+* Minor documentation updates
+
 ## [0.9.0]
 
 ### Added
