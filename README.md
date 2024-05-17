@@ -16,12 +16,12 @@ relating to k8s, such as commands, config files, and manifest file.
 ## Example Cluster Management
 
 * [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/)
+* [Grafana & Prometheus](./example-apps/grafana/)
 
 ## Example Applications
 
 * [Sample Blank Objects](./example-apps/blank-sample-objects/)
 * [Sample Application](./example-apps/sample-app/)
-* [Grafana](./example-apps/grafana/)
 * [Nginx](./example-apps/nginx/)
 
 ## Example Kubeconf
