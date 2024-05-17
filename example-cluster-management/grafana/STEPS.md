@@ -12,10 +12,12 @@
   - [Overview](#overview)
   - [Guides](#guides)
   - [Prometheus Deployment](#prometheus-deployment)
+  - [Deployment](#deployment)
+    - [Validate](#validate)
     - [Clean Up](#clean-up)
   - [Grafana Deployment](#grafana-deployment-1)
-    - [Deployment](#deployment)
-    - [Validate](#validate)
+    - [Deployment](#deployment-1)
+    - [Validate](#validate-1)
     - [Access Grafana](#access-grafana)
     - [Clean Up](#clean-up-1)
 
@@ -27,12 +29,18 @@
 
 ## Prometheus Deployment
 
+## Deployment
+
 * ```kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/bundle.yaml --force-conflicts=true --server-side=true```
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-rbac.yaml```
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-instance.yaml```
-* ```kubectl port-forward svc/prometheus-operated 9090:9090``` and visit http://localhost:9090/
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-service-monitor.yaml```
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-service.yaml```
+
+### Validate
+
+* ```kubectl port-forward svc/prometheus-operated 9090:9090``` 
+* Visit http://localhost:9090/
 
 ### Clean Up
 

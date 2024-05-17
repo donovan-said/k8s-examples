@@ -19,7 +19,7 @@ or
 * ```kubectl get pods -n nginx```
 * ```kubectl get replicasets -n nginx```
 
-## Access Grafana
+## Access Nginx
 
 * ```kubectl get all --n nginx ```
 * Access nginx in browser via http://localhost:30500/ or http://127.0.0.1:30500/
