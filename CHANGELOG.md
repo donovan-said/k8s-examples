@@ -17,6 +17,16 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.9.0]
+
+### Added
+
+* Prometheus and tied it into Grafana
+
+### Changed
+
+* Repository structure to better split k8s management and applications
+
 ## [0.8.0]
 
 ### Added

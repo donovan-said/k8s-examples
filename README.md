@@ -1,11 +1,22 @@
 # K8s Guide & Examples
 
-The purpose of this repository is to act as a collation of useful information 
-relating to k8s, such as commands, config files, and manifest file. 
-
 <p align="center">
     <img src="./imgs/k8s_logo.png" width="350" height="300">
 </p>
+
+## Overview
+
+The purpose of this repository is to act as a collation of useful information 
+relating to k8s, such as commands, config files, and manifest file. 
+
+- [K8s Guide \& Examples](#k8s-guide--examples)
+  - [Overview](#overview)
+  - [Concepts \& Guides](#concepts--guides)
+  - [Examples](#examples)
+    - [Cluster Management](#cluster-management)
+    - [Applications](#applications)
+    - [Kubeconf](#kubeconf)
+  - [Quick Guide to Docs](#quick-guide-to-docs)
 
 ## Concepts & Guides
 
@@ -13,18 +24,20 @@ relating to k8s, such as commands, config files, and manifest file.
 * [kubectl Common Commands](./docs/KUBECTL_COMMANDS.md)
 * [Helm Concepts](./docs/HELM_CONCEPTS.md)
 
-## Example Cluster Management
+## Examples 
+
+### Cluster Management
 
 * [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/)
+* [Grafana & Prometheus](./example-cluster-management/grafana/)
 
-## Example Applications
+### Applications
 
 * [Sample Blank Objects](./example-apps/blank-sample-objects/)
 * [Sample Application](./example-apps/sample-app/)
-* [Grafana](./example-apps/grafana/)
 * [Nginx](./example-apps/nginx/)
 
-## Example Kubeconf
+### Kubeconf
 
 * [Example kubeconf](./example-kubeconf/)
 
