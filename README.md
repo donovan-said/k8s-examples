@@ -16,7 +16,7 @@ relating to k8s, such as commands, config files, and manifest file.
 ## Example Cluster Management
 
 * [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/)
-* [Grafana & Prometheus](./example-apps/grafana/)
+* [Grafana & Prometheus](./example-cluster-management/grafana/)
 
 ## Example Applications
 
