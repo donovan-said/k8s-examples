@@ -3,6 +3,8 @@
 - [K8s Concepts](#k8s-concepts)
   - [Cluster Architecture](#cluster-architecture)
     - [Kubernetes Components](#kubernetes-components)
+      - [Nodes](#nodes)
+      - [Controllers](#controllers)
   - [Configuration](#configuration)
     - [ConfigMaps \& Secrets](#configmaps--secrets)
     - [Kubeconfig](#kubeconfig)
@@ -16,6 +18,8 @@
   - [Cloud K8s Services](#cloud-k8s-services)
   - [Extending Kubernetes](#extending-kubernetes)
     - [Custom Resources](#custom-resources)
+      - [Extending the Kubernetes API](#extending-the-kubernetes-api)
+      - [Operator Patterns](#operator-patterns)
     - [Istio and Envoy](#istio-and-envoy)
   - [Troubleshooting](#troubleshooting)
 
@@ -37,6 +41,14 @@ Detailed information can be found [here](https://kubernetes.io/docs/concepts/ove
 | [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)                     | n/a        | Node              |
 | [kube-proxy](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/)               | k-proxy    | Node              |
 | [Container runtime interface](https://kubernetes.io/docs/concepts/architecture/cri/)                      | n/a        | Node              |
+
+#### Nodes
+
+* [Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/)
+
+#### Controllers
+
+* [k8s Docs - Controllers](https://kubernetes.io/docs/concepts/architecture/controller/)
 
 ## Configuration
 
@@ -95,7 +107,14 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ### Custom Resources
 
+#### Extending the Kubernetes API
+
 * [Custom Resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
+
+#### Operator Patterns
+
+* [YouTube - TechWorld with Nana - Kubernetes Operator Simply Explained](https://www.youtube.com/watch?v=ha3LjlD6g7g&list=PLy7NrYWoggjw0OMxUDIImjWQjM7qZWn_R)
+* [k8s Docs - Operator Patterns](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
 ### Istio and Envoy
 
