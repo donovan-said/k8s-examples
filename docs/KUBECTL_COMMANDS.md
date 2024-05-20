@@ -9,6 +9,7 @@ A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](
     - [Configuration Files (Manifests)](#configuration-files-manifests)
     - [Cluster Management \& Context](#cluster-management--context)
     - [Proxy](#proxy)
+    - [Jobs](#jobs)
     - [Cronjobs](#cronjobs)
     - [DaemonSets](#daemonsets)
     - [Deployments](#deployments)
@@ -70,6 +71,11 @@ Checking and setting which environment kubectl is pointing to:
 ### Proxy
 
 * ```kubectl proxy```
+
+### Jobs
+
+* ```kubectl describe job {job_name}```
+* ```kubectl get job {job_name}```
 
 ### Cronjobs
 
