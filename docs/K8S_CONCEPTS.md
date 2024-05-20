@@ -5,6 +5,7 @@
     - [Kubernetes Components](#kubernetes-components)
       - [Nodes](#nodes)
       - [Controllers](#controllers)
+    - [Garbage Collection](#garbage-collection)
   - [Configuration](#configuration)
     - [ConfigMaps \& Secrets](#configmaps--secrets)
     - [Kubeconfig](#kubeconfig)
@@ -13,18 +14,22 @@
     - [Labels \& Annotations](#labels--annotations)
     - [Configure Pods, Containers \& Deployments](#configure-pods-containers--deployments)
   - [RBAC](#rbac)
+  - [Workloads](#workloads)
+    - [Pods](#pods)
+      - [Init Containers](#init-containers)
+      - [Sidecar Containers](#sidecar-containers)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
     - [Services](#services)
       - [Service Types](#service-types)
       - [Headless Service](#headless-service)
     - [Ingress](#ingress)
   - [Scheduling, Preemption and Eviction](#scheduling-preemption-and-eviction)
-  - [Cloud K8s Services](#cloud-k8s-services)
   - [Extending Kubernetes](#extending-kubernetes)
     - [Custom Resources](#custom-resources)
       - [Extending the Kubernetes API](#extending-the-kubernetes-api)
       - [Operator Patterns](#operator-patterns)
     - [Istio and Envoy](#istio-and-envoy)
+  - [Cloud K8s Services](#cloud-k8s-services)
   - [Troubleshooting](#troubleshooting)
 
 ## Cluster Architecture
@@ -53,6 +58,10 @@ Detailed information can be found [here](https://kubernetes.io/docs/concepts/ove
 #### Controllers
 
 * [k8s Docs - Controllers](https://kubernetes.io/docs/concepts/architecture/controller/)
+
+### Garbage Collection
+
+* [Garbage Collection](https://kubernetes.io/docs/concepts/architecture/garbage-collection/)
 
 ## Configuration
 
@@ -91,6 +100,18 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Request Verbs](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#determine-the-request-verb)
 * [Hack Tricks Cloud - Kubernetes Role-Based Access Control(RBAC)](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security/kubernetes-role-based-access-control-rbac)
 
+## Workloads
+
+### Pods
+
+#### Init Containers
+
+* [k8s Docs - Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+
+#### Sidecar Containers
+
+* [k8s Docs - Sidecar Containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/)
+
 ## Services, Load Balancing, and Networking
 
 ### Services
@@ -103,12 +124,12 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 #### Service Types
 
-| Service Type                                                                                  | Description                             |
-| :-------------------------------------------------------------------------------------------- | :-------------------------------------- |
-| [ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip)  | This is the default type for a service. |
-| [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)    |                                         |
-| [LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) |                                         |
-| [ExternalName](https://kubernetes.io/docs/concepts/services-networking/service/#externalname) |                                         |
+| Service Type                                                                                  | Description                                              |
+| :-------------------------------------------------------------------------------------------- | :------------------------------------------------------- |
+| [ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip)  | This is the default type for a service.                  |
+| [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)    | Dedicated port on each node.                             |
+| [LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) | Extension of NodePort utilising third part load balancer |
+| [ExternalName](https://kubernetes.io/docs/concepts/services-networking/service/#externalname) |                                                          |
 
 #### Headless Service
 
@@ -116,17 +137,13 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ### Ingress
 
+* [YouTube - TechWorld with Nana - Kubernetes Ingress Tutorial](https://www.youtube.com/watch?v=80Ew_fsV4rM&list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC&index=10)
 * [k8s Docs - Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing)
+* [k8s Docs - Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
 
 ## Scheduling, Preemption and Eviction
 
 * [k8s Docs - Pod Topology Spread Constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/)
-
-## Cloud K8s Services 
-
-* [AWS EKS (Elastic Kubernetes Service)](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
-* [GCP GKE (Google Kubernetes Engine)](https://cloud.google.com/kubernetes-engine)
-* [Azure AKS (Azure Kubernetets Service)](https://azure.microsoft.com/en-us/products/kubernetes-service)
 
 ## Extending Kubernetes
 
@@ -147,6 +164,12 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 * [Istio Docs - Architecture](https://istio.io/latest/docs/ops/deployment/architecture/)
 * [Envoy Docs](https://www.envoyproxy.io/)
+
+## Cloud K8s Services 
+
+* [AWS EKS (Elastic Kubernetes Service)](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
+* [GCP GKE (Google Kubernetes Engine)](https://cloud.google.com/kubernetes-engine)
+* [Azure AKS (Azure Kubernetets Service)](https://azure.microsoft.com/en-us/products/kubernetes-service)
 
 ## Troubleshooting
 

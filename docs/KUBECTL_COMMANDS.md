@@ -1,27 +1,35 @@
-# kubectl Commands
+# kubectl
 
 A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](https://spacelift.io/blog/kubernetes-cheat-sheet#events).
 
-- [kubectl Commands](#kubectl-commands)
-  - [Output Format \& General Options](#output-format--general-options)
-  - [Configuration Files (Manifests)](#configuration-files-manifests)
-  - [Cluster Management \& Context](#cluster-management--context)
-  - [Proxy](#proxy)
-  - [Cronjobs](#cronjobs)
-  - [DaemonSets](#daemonsets)
-  - [Deployments](#deployments)
-  - [Events](#events)
-  - [Logs](#logs)
-  - [Nodes](#nodes)
-  - [Namespaces](#namespaces)
-  - [Pods](#pods)
-  - [ReplicaSets](#replicasets)
-  - [Roles \& Role Bondings](#roles--role-bondings)
-  - [Secrets](#secrets)
-  - [Services](#services)
-  - [Service Accounts](#service-accounts)
+- [kubectl](#kubectl)
+  - [kubectl Installation](#kubectl-installation)
+  - [kubectl Commands](#kubectl-commands)
+    - [Output Format \& General Options](#output-format--general-options)
+    - [Configuration Files (Manifests)](#configuration-files-manifests)
+    - [Cluster Management \& Context](#cluster-management--context)
+    - [Proxy](#proxy)
+    - [Cronjobs](#cronjobs)
+    - [DaemonSets](#daemonsets)
+    - [Deployments](#deployments)
+    - [Events](#events)
+    - [Logs](#logs)
+    - [Nodes](#nodes)
+    - [Namespaces](#namespaces)
+    - [Pods](#pods)
+    - [ReplicaSets](#replicasets)
+    - [Roles \& Role Bondings](#roles--role-bondings)
+    - [Secrets](#secrets)
+    - [Services](#services)
+    - [Service Accounts](#service-accounts)
 
-## Output Format & General Options
+## kubectl Installation
+
+Please see the official [kubectl Installation Guide](https://kubernetes.io/docs/tasks/tools/).
+
+## kubectl Commands
+
+### Output Format & General Options
 
 * ```alias k=kubectl```
 * ```-o=json, e.g. kubectl get pods -o=json```
@@ -29,7 +37,7 @@ A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](
 * ```-o=wide, e.g. kubectl get pods -o=wide```
 * ```-n, e.g. kubectl get pods -n={namespace_name}```
 
-## Configuration Files (Manifests)
+### Configuration Files (Manifests)
 
 * ```kubectl --kubeconfig=path/to/kubeconfig {some_command}```
 * ```kubectl apply -f {config_file}```
@@ -39,7 +47,7 @@ A lot of these commands have been pulled from [Sapcelift - Kubectl Cheat Sheet](
 * ```kubectl create -f {url}```
 * ```kubectl delete -f {configuration_file}```
   
-## Cluster Management & Context
+### Cluster Management & Context
 
 Checking and setting which environment kubectl is pointing to:
 
@@ -59,16 +67,16 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl get configmap {configmap_name} -o jsonpath='{.data}' | jq``` (Get ConfigMap JSON object)
 * ```kubectl delete configmap {configmap_name}```
 
-## Proxy
+### Proxy
 
 * ```kubectl proxy```
 
-## Cronjobs
+### Cronjobs
 
 * ```kubectl get cronjobs```
 * ```kubectl delete cronjob {cronjob_name}```
 
-## DaemonSets
+### DaemonSets
 
 * ```kubectl get daemonset```
 * ```kubectl edit daemonset {daemonset_name}```
@@ -77,7 +85,7 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl rollout daemonset```
 * ```kubectl describe ds {daemonset_name} -n {namespace_name}```
 
-## Deployments
+### Deployments
 
 * ```kubectl get deployments```
 * ```kubectl edit deployment {deployment_name}```
@@ -88,7 +96,7 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl rollout restart deployment {deployment_name}```
 * ```kubectl replace --force -f {configuration_file}```
 
-## Events
+### Events
 
 * ```kubectl get events```
 * ```kubectl get events --field-selector type=Warning```
@@ -97,7 +105,7 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl get events --field-selector involvedObject.kind=Node, involvedObject.name={node_name}```
 * ```kubectl get events --field-selector type!=Normal```
 
-## Logs
+### Logs
 
 * ```kubectl logs {pod_name}```
 * ```kubectl logs --since=6h {pod_name}```
@@ -108,7 +116,7 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl logs {pod_name} pod.log```
 * ```kubectl logs --previous <pod_name>```
 
-## Nodes
+### Nodes
 
 * ```kubectl taint node {node_name}```
 * ```kubectl get node```
@@ -121,7 +129,7 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl drain node {node_name}```
 * ```kubectl label node```
 
-## Namespaces
+### Namespaces
 
 * ```kubectl create namespace {namespace_name}```
 * ```kubectl get namespace {namespace_name}```
@@ -130,7 +138,7 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl edit namespace {namespace_name}```
 * ```kubectl top namespace {namespace_name}```
 
-## Pods
+### Pods
 
 * ```kubectl get pod```
 * ```kubectl get pods --sort-by='.status.containerStatuses[0].restartCount```
@@ -146,13 +154,13 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl get pods --show-labels```
 * ```kubectl port-forward {pod_name} <port number to listen on>:<port number to forward to>```
 
-## ReplicaSets
+### ReplicaSets
 
 * ```kubectl get replicasets```
 * ```kubectl describe replicasets {replicaset_name}```
 * ```kubectl kubectl scale --replicas=[x]```
 
-## Roles & Role Bondings
+### Roles & Role Bondings
 
 * ```kubectl get clusterroles```
 * ```kubectl describe clusterroles```
@@ -163,21 +171,21 @@ Checking and setting which environment kubectl is pointing to:
 * ```kubectl get rolebindings```
 * ```kubectl describe rolebindings```
 
-## Secrets
+### Secrets
 
 * ```kubectl create secret```
 * ```kubectl get secrets```
 * ```kubectl describe secrets```
 * ```kubectl delete secret {secret_name}```
 
-## Services
+### Services
 
 * ```kubectl get services```
 * ```kubectl kubectl describe services```
 * ```kubectl expose deployment [deployment_name]```
 * ```kubectl edit services```
 
-## Service Accounts
+### Service Accounts
 
 * ```kubectl get serviceaccounts```
 * ```kubectl describe serviceaccounts```
