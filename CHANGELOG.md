@@ -17,6 +17,16 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.11.0]
+
+### Changed
+
+* Minor documentation updates
+
+### Added
+
+* Sample jobs sections
+
 ## [0.10.0]
 
 ### Changed

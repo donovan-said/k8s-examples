@@ -41,7 +41,8 @@ used the roadmap defined by [roadmap.sh](https://roadmap.sh/kubernetes).
 
 ### Jobs & Cronjobs
 
-* [Sample Job](./example-jobs/sample-job/STEPS.md)
+* [Sample Job](./example-jobs/sample-cronjob/STEPS.md)
+* [Sample Cronjob](./example-jobs/sample-cronjob/STEPS.md)
 
 ### Kubeconf
 
