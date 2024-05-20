@@ -14,6 +14,10 @@
     - [Configure Pods, Containers \& Deployments](#configure-pods-containers--deployments)
   - [RBAC](#rbac)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
+    - [Services](#services)
+      - [Service Types](#service-types)
+      - [Headless Service](#headless-service)
+    - [Ingress](#ingress)
   - [Scheduling, Preemption and Eviction](#scheduling-preemption-and-eviction)
   - [Cloud K8s Services](#cloud-k8s-services)
   - [Extending Kubernetes](#extending-kubernetes)
@@ -89,8 +93,29 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ## Services, Load Balancing, and Networking
 
+### Services
+
+* [YouTube - TechWorld with Nana - Kubernetes Services - ClusterIP vs NodePort vs LoadBalancer vs Headless Service](https://www.youtube.com/watch?v=T4Z7visMM4E&t=11s)
+* [k8s Docs - Services](https://kubernetes.io/docs/concepts/services-networking/service/)
+* [k8s Docs - Defining a Service](https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service)
 * [k8s Docs - Use a Service to Access an Application in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
 * [k8s Docs - Service Configuratio File](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+#### Service Types
+
+| Service Type                                                                                  | Description                             |
+| :-------------------------------------------------------------------------------------------- | :-------------------------------------- |
+| [ClusterIP](https://kubernetes.io/docs/concepts/services-networking/service/#type-clusterip)  | This is the default type for a service. |
+| [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport)    |                                         |
+| [LoadBalancer](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) |                                         |
+| [ExternalName](https://kubernetes.io/docs/concepts/services-networking/service/#externalname) |                                         |
+
+#### Headless Service
+
+* [k8s Docs - Headless Service (With and Without Selectors)](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services)
+
+### Ingress
+
 * [k8s Docs - Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing)
 
 ## Scheduling, Preemption and Eviction
