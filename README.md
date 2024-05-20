@@ -7,7 +7,8 @@
 ## Overview
 
 The purpose of this repository is to act as a collation of useful information 
-relating to k8s, such as commands, config files, and manifest file. 
+relating to k8s, such as commands, config files, and manifest file. I've also 
+used the roadmap defined by [roadmap.sh](https://roadmap.sh/kubernetes).
 
 - [K8s Guide \& Examples](#k8s-guide--examples)
   - [Overview](#overview)
@@ -15,6 +16,7 @@ relating to k8s, such as commands, config files, and manifest file.
   - [Examples](#examples)
     - [Cluster Management](#cluster-management)
     - [Applications](#applications)
+    - [Jobs \& Cronjobs](#jobs--cronjobs)
     - [Kubeconf](#kubeconf)
   - [Quick Guide to Docs](#quick-guide-to-docs)
 
@@ -36,6 +38,11 @@ relating to k8s, such as commands, config files, and manifest file.
 * [Sample Blank Objects](./example-apps/blank-sample-objects/)
 * [Sample Application](./example-apps/sample-app/STEPS.md)
 * [Nginx](./example-apps/nginx/STEPS.md)
+
+### Jobs & Cronjobs
+
+* [Sample Job](./example-jobs/sample-cronjob/STEPS.md)
+* [Sample Cronjob](./example-jobs/sample-cronjob/STEPS.md)
 
 ### Kubeconf
 
