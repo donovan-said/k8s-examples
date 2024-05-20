@@ -18,6 +18,9 @@
     - [Pods](#pods)
       - [Init Containers](#init-containers)
       - [Sidecar Containers](#sidecar-containers)
+    - [Workload Management](#workload-management)
+      - [Jobs](#jobs)
+      - [Cronjob](#cronjob)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
     - [Services](#services)
       - [Service Types](#service-types)
@@ -111,6 +114,16 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 #### Sidecar Containers
 
 * [k8s Docs - Sidecar Containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/)
+
+### Workload Management
+
+#### Jobs
+
+* [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
+
+#### Cronjob
+
+* [Cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 
 ## Services, Load Balancing, and Networking
 
