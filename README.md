@@ -57,6 +57,7 @@ used the roadmap defined by [roadmap.sh](https://roadmap.sh/kubernetes).
 
 * [Sample Blank Objects](./example-apps/blank-sample-objects/)
 * [Sample Application](./example-apps/sample-app/STEPS.md)
+* [Sample Sidecar](./example-apps/sample-sidecar/STEPS.md)
 * [Nginx](./example-apps/nginx/STEPS.md)
 
 #### Jobs & Cronjobs
