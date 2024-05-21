@@ -19,8 +19,7 @@
       - [Init Containers](#init-containers)
       - [Sidecar Containers](#sidecar-containers)
     - [Workload Management](#workload-management)
-      - [Jobs](#jobs)
-      - [Cronjob](#cronjob)
+      - [Jobs and Cronjobs](#jobs-and-cronjobs)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
     - [Services](#services)
       - [Service Types](#service-types)
@@ -117,13 +116,11 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ### Workload Management
 
-#### Jobs
+#### Jobs and Cronjobs
 
-* [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
-
-#### Cronjob
-
-* [Cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+* [K8s Docs - Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
+* [K8s Docs - Cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+* [Spacelift Docs - What Are Kubernetes Jobs? Use Cases, Types & How to Run](https://spacelift.io/blog/kubernetes-jobs)
 
 ## Services, Load Balancing, and Networking
 
