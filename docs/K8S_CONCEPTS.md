@@ -18,10 +18,12 @@
     - [Pods](#pods)
       - [Init Containers](#init-containers)
       - [Sidecar Containers](#sidecar-containers)
+      - [Pause Container](#pause-container)
     - [Workload Management](#workload-management)
       - [Jobs and Cronjobs](#jobs-and-cronjobs)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
     - [Services](#services)
+    - [Network Policies](#network-policies)
       - [Service Types](#service-types)
       - [Headless Service](#headless-service)
     - [Ingress](#ingress)
@@ -116,6 +118,10 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 * [k8s Docs - Sidecar Containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/)
 
+#### Pause Container
+
+* [DevOpsSchool - What is Pause container in Kubernetes?](https://www.devopsschool.com/blog/what-is-pause-container-in-kubernetes/)
+
 ### Workload Management
 
 #### Jobs and Cronjobs
@@ -133,6 +139,12 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Defining a Service](https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service)
 * [k8s Docs - Use a Service to Access an Application in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
 * [k8s Docs - Service Configuratio File](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+### Network Policies
+
+* [YouTube - TechWorld with Nana - Kubernetes Networking - Container Communication inside the Pod](https://www.youtube.com/watch?v=5cNrTU6o3Fw&t=11s)
+* [k8s Docs - Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+* [GitHub - The Container Network Interface (cni)](https://github.com/containernetworking/cni)
 
 #### Service Types
 
