@@ -17,6 +17,17 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.12.0]
+
+### Changed
+
+* Minor documentation updates
+
+### Added
+
+* Karpenter docs
+* Sidecar example
+
 ## [0.11.0]
 
 ### Changed

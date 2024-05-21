@@ -6,23 +6,24 @@
       - [Nodes](#nodes)
       - [Controllers](#controllers)
     - [Garbage Collection](#garbage-collection)
-  - [Configuration](#configuration)
-    - [ConfigMaps \& Secrets](#configmaps--secrets)
-    - [Kubeconfig](#kubeconfig)
-  - [Object Management](#object-management)
+  - [Configuration and Object Management](#configuration-and-object-management)
+    - [Best Practice](#best-practice)
     - [Imperative Vs Declarative Management](#imperative-vs-declarative-management)
-    - [Labels \& Annotations](#labels--annotations)
+    - [Kubeconfig](#kubeconfig)
+    - [ConfigMaps \& Secrets](#configmaps--secrets)
     - [Configure Pods, Containers \& Deployments](#configure-pods-containers--deployments)
+    - [Labels \& Annotations](#labels--annotations)
   - [RBAC](#rbac)
   - [Workloads](#workloads)
     - [Pods](#pods)
       - [Init Containers](#init-containers)
       - [Sidecar Containers](#sidecar-containers)
+      - [Pause Container](#pause-container)
     - [Workload Management](#workload-management)
-      - [Jobs](#jobs)
-      - [Cronjob](#cronjob)
+      - [Jobs and Cronjobs](#jobs-and-cronjobs)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
     - [Services](#services)
+    - [Network Policies](#network-policies)
       - [Service Types](#service-types)
       - [Headless Service](#headless-service)
     - [Ingress](#ingress)
@@ -66,12 +67,16 @@ Detailed information can be found [here](https://kubernetes.io/docs/concepts/ove
 
 * [Garbage Collection](https://kubernetes.io/docs/concepts/architecture/garbage-collection/)
 
-## Configuration
+## Configuration and Object Management
 
-### ConfigMaps & Secrets
+### Best Practice
 
-* [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
-* [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
+* [k8s Docs - Configuration Best Practices](https://kubernetes.io/docs/concepts/configuration/overview/)
+
+### Imperative Vs Declarative Management
+
+* [k8s Docs - Imperative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/)
+* [k8s Docs - Declarative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/)
 
 ### Kubeconfig
 
@@ -80,22 +85,20 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Organizing Cluster Access Using kubeconfig Files](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/)
 * [Medium Article by Claire Lee - Kubeconfig](https://yuminlee2.medium.com/kubernetes-kubeconfig-file-4aabe3b04ade#4890)
 
-## Object Management
+### ConfigMaps & Secrets
 
-### Imperative Vs Declarative Management
-
-* [k8s Docs - Imperative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/imperative-config/)
-* [k8s Docs - Declarative Management of Kubernetes Objects Using Configuration Files](https://kubernetes.io/docs/tasks/manage-kubernetes-objects/declarative-config/)
-
-### Labels & Annotations
-
-* [k8s Docs - Recommended Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
-* [K8s Docs - Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
+* [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
+* [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 
 ### Configure Pods, Containers & Deployments
 
 * [Jack Dwyer - Kubernetes Deployment Vs Pod:](https://zeet.co/blog/kubernetes-deployment-vs-pod#what-is-a-kubernetes-deployment)
 * [k8s Docs - Liveness, Readiness and Startup Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+
+### Labels & Annotations
+
+* [k8s Docs - Recommended Labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/)
+* [K8s Docs - Annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/)
 
 ## RBAC
 
@@ -115,15 +118,17 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 * [k8s Docs - Sidecar Containers](https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/)
 
+#### Pause Container
+
+* [DevOpsSchool - What is Pause container in Kubernetes?](https://www.devopsschool.com/blog/what-is-pause-container-in-kubernetes/)
+
 ### Workload Management
 
-#### Jobs
+#### Jobs and Cronjobs
 
-* [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
-
-#### Cronjob
-
-* [Cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+* [K8s Docs - Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
+* [K8s Docs - Cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+* [Spacelift Docs - What Are Kubernetes Jobs? Use Cases, Types & How to Run](https://spacelift.io/blog/kubernetes-jobs)
 
 ## Services, Load Balancing, and Networking
 
@@ -134,6 +139,12 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Defining a Service](https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service)
 * [k8s Docs - Use a Service to Access an Application in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
 * [k8s Docs - Service Configuratio File](https://kubernetes.io/docs/concepts/services-networking/service/)
+
+### Network Policies
+
+* [YouTube - TechWorld with Nana - Kubernetes Networking - Container Communication inside the Pod](https://www.youtube.com/watch?v=5cNrTU6o3Fw&t=11s)
+* [k8s Docs - Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+* [GitHub - The Container Network Interface (cni)](https://github.com/containernetworking/cni)
 
 #### Service Types
 

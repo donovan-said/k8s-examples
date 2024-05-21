@@ -13,40 +13,61 @@ used the roadmap defined by [roadmap.sh](https://roadmap.sh/kubernetes).
 - [K8s Guide \& Examples](#k8s-guide--examples)
   - [Overview](#overview)
   - [Concepts \& Guides](#concepts--guides)
+    - [General](#general)
+    - [Package Management](#package-management)
+    - [Node Management](#node-management)
   - [Examples](#examples)
-    - [Cluster Management](#cluster-management)
-    - [Applications](#applications)
-    - [Jobs \& Cronjobs](#jobs--cronjobs)
     - [Kubeconf](#kubeconf)
+    - [Cluster Management](#cluster-management)
+    - [Manifests](#manifests)
+      - [Applications](#applications)
+      - [Jobs \& Cronjobs](#jobs--cronjobs)
+    - [Helm](#helm)
   - [Quick Guide to Docs](#quick-guide-to-docs)
 
 ## Concepts & Guides
 
+### General 
+
 * [K8s Concepts](./docs/K8S_CONCEPTS.md)
 * [kubectl Common Commands](./docs/KUBECTL_COMMANDS.md)
+
+### Package Management
+
 * [Helm Concepts](./docs/HELM_CONCEPTS.md)
 
+### Node Management
+
+* [Karpenter Concepts](./docs/KARPENTER_CONCEPTS.md)
+
 ## Examples 
+
+### Kubeconf
+
+* [Example kubeconf](./example-kubeconf/)
 
 ### Cluster Management
 
 * [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/STEPS.md)
 * [Grafana & Prometheus](./example-cluster-management/grafana/STEPS.md)
 
-### Applications
+### Manifests
+
+#### Applications
 
 * [Sample Blank Objects](./example-apps/blank-sample-objects/)
 * [Sample Application](./example-apps/sample-app/STEPS.md)
+* [Sample Sidecar](./example-apps/sample-sidecar/STEPS.md)
 * [Nginx](./example-apps/nginx/STEPS.md)
 
-### Jobs & Cronjobs
+#### Jobs & Cronjobs
 
 * [Sample Job](./example-jobs/sample-cronjob/STEPS.md)
 * [Sample Cronjob](./example-jobs/sample-cronjob/STEPS.md)
 
-### Kubeconf
+### Helm
 
-* [Example kubeconf](./example-kubeconf/)
+* [Sample Chart](./example-helm-charts/sample-chart/)
 
 ## Quick Guide to Docs
 
