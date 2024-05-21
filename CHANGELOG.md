@@ -17,6 +17,12 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.12.1]
+
+### Fixed
+
+* Mixed up STEP files for sample sidecar and nginx deployment
+
 ## [0.12.0]
 
 ### Changed
