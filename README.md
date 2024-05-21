@@ -25,6 +25,7 @@ used the roadmap defined by [roadmap.sh](https://roadmap.sh/kubernetes).
 * [K8s Concepts](./docs/K8S_CONCEPTS.md)
 * [kubectl Common Commands](./docs/KUBECTL_COMMANDS.md)
 * [Helm Concepts](./docs/HELM_CONCEPTS.md)
+* [Karpenter Concepts](./docs/KARPENTER_CONCEPTS.md)
 
 ## Examples 
 
