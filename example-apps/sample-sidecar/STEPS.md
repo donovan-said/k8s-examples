@@ -1,30 +1,25 @@
 # Sidecar Deployment
 
-Based on guide by 
+This example is to illustrate inner pod communiate via localhost.
+
+Based on guide by [YouTube - TechWorld with Nana - Kubernetes Networking - Container Communication inside the Pod](https://www.youtube.com/watch?v=5cNrTU6o3Fw&t=11s)
 
 ## Deployment
 
-* ```kubectl apply -f example-apps/nginx/nginx-namespace.yaml```
-* ```kubectl apply -f example-apps/nginx/nginx-manifest.yaml -n nginx```
+* ```kubectl apply -f example-apps/sample-sidecar/sample-sidecar.yaml```
 
 ## Validate
 
-* ```kubectl get all -n nginx```
-
-or
-
-* ```kubectl get namespaces```             
-* ```kubectl get deployments -n nginx```
-* ```kubectl get service -n nginx```
-* ```kubectl get pods -n nginx```
-* ```kubectl get replicasets -n nginx```
+* ```kubectl get pod```
 
 ## Access Nginx
 
-* ```kubectl get all --n nginx ```
-* Access nginx in browser via http://localhost:30500/ or http://127.0.0.1:30500/
+* Enter curl container to curl Nginx container
+    * ```kubectl exec -it nginx -c sidecar -- /bin/sh```
+      * ```netstat -ln```
+      * ```curl localhost:80```
+    * ```kubectl logs nginx -c nginx-container```
 
 ## Clean Up
 
-```kubectl delete -f example-apps/nginx/nginx-manifest.yaml -n nginx```
-```kubectl delete -f example-apps/nginx/nginx-namespace.yaml```
+```kubectl delete -f example-apps/sample-sidecar/sample-sidecar.yaml```
