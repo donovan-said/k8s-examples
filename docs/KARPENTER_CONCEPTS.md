@@ -1,7 +1,7 @@
 # Karpenter Concepts
 
 <p align="center">
-    <img src="../imgs/karpenter_logo.png" width="450" height="300">
+    <img src="../imgs/karpenter_logo.png" width="600" height="300">
 </p>
 
 ## Overview
