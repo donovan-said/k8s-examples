@@ -17,6 +17,12 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.13.0]
+
+### Changed
+
+* Refactored manifests to follow the all-in-one best practice
+
 ## [0.12.1]
 
 ### Fixed
