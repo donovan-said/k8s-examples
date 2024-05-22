@@ -21,7 +21,7 @@ __Reference__:
 
 ### Changed
 
-* Refarctored manifests to follow the all-in-one best practice
+* Refactored manifests to follow the all-in-one best practice
 
 ## [0.12.1]
 
