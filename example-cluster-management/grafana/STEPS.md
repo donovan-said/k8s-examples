@@ -14,13 +14,13 @@
   - [Prometheus](#prometheus)
     - [Prometheus Operator Deployment](#prometheus-operator-deployment)
     - [Prometheus Deployment](#prometheus-deployment)
-    - [Access Prometheus](#access-prometheus)
+    - [Prometheus Access](#prometheus-access)
     - [Prometheus Clean Up](#prometheus-clean-up)
   - [Grafana Deployment](#grafana-deployment-1)
-    - [Deployment](#deployment)
-    - [Validate](#validate)
-    - [Access Grafana](#access-grafana)
-    - [Clean Up](#clean-up)
+    - [Grafana Deployment](#grafana-deployment-2)
+    - [Grafana Validate](#grafana-validate)
+    - [Grafana Access](#grafana-access)
+    - [Grafana Clean Up](#grafana-clean-up)
 
 ## Guides
 
@@ -42,7 +42,7 @@
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-service-monitor.yaml```
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-service.yaml```
 
-### Access Prometheus
+### Prometheus Access
 
 * ```kubectl port-forward svc/prometheus-operated 9090:9090``` 
 * Visit http://localhost:9090/
@@ -57,11 +57,11 @@
 
 ## Grafana Deployment
 
-### Deployment
+### Grafana Deployment
 
 * ```kubectl apply -f example-cluster-management/grafana/grafana-manifest.yaml -n grafana-namespace```
 
-### Validate
+### Grafana Validate
 
 * ```kubectl get all --n grafana-namespace```
 
@@ -71,10 +71,10 @@ or
 * ```kubectl get deployments -n grafana-namespace  -o wide```
 * ```kubectl get svc -n grafana-namespace  -o wide```
 
-### Access Grafana
+### Grafana Access
 
 * Proceed to access the endpoint [here](http://localhost:3000/).
 
-### Clean Up
+### Grafana Clean Up
 
 * ```kubectl delete -f example-cluster-management/grafana/grafana-manifest.yaml -n grafana-namespace```
