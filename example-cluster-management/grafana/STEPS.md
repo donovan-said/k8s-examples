@@ -13,8 +13,8 @@
   - [Guides](#guides)
   - [Prometheus](#prometheus)
     - [Prometheus Operator Deployment](#prometheus-operator-deployment)
-      - [Prometheus Deployment](#prometheus-deployment)
-      - [Access Prometheus](#access-prometheus)
+    - [Prometheus Deployment](#prometheus-deployment)
+    - [Access Prometheus](#access-prometheus)
     - [Prometheus Clean Up](#prometheus-clean-up)
   - [Grafana Deployment](#grafana-deployment-1)
     - [Deployment](#deployment)
@@ -36,13 +36,13 @@
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-operator-manifest.yaml```
 
 
-#### Prometheus Deployment
+### Prometheus Deployment
 
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-instance.yaml```
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-service-monitor.yaml```
 * ```kubectl apply -f example-cluster-management/grafana/prometheus-service.yaml```
 
-#### Access Prometheus
+### Access Prometheus
 
 * ```kubectl port-forward svc/prometheus-operated 9090:9090``` 
 * Visit http://localhost:9090/
