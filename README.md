@@ -7,11 +7,18 @@
 ## Overview
 
 The purpose of this repository is to act as a collation of useful information 
-relating to k8s, such as commands, config files, and manifest file. I've also 
-used the roadmap defined by [roadmap.sh](https://roadmap.sh/kubernetes).
+relating to k8s and associated third party services. All of which helps me 
+formalise and deepen my k8s knowledge.
+
+My main guidelines were (though there are many more reference throughout):
+* The official [k8s Documentation](https://kubernetes.io/docs/home/)
+* The roadmap defined by [roadmap.sh](https://roadmap.sh/kubernetes)
+
+## Content
 
 - [K8s Guide \& Examples](#k8s-guide--examples)
   - [Overview](#overview)
+  - [Content](#content)
   - [Concepts \& Guides](#concepts--guides)
     - [General](#general)
     - [Package Management](#package-management)

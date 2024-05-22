@@ -4,7 +4,6 @@ Based on guide by
 
 ## Deployment
 
-* ```kubectl apply -f example-apps/nginx/nginx-namespace.yaml```
 * ```kubectl apply -f example-apps/nginx/nginx-manifest.yaml -n nginx```
 
 ## Validate
@@ -27,4 +26,3 @@ or
 ## Clean Up
 
 ```kubectl delete -f example-apps/nginx/nginx-manifest.yaml -n nginx```
-```kubectl delete -f example-apps/nginx/nginx-namespace.yaml```

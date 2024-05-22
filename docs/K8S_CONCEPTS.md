@@ -21,6 +21,7 @@
       - [Pause Container](#pause-container)
     - [Workload Management](#workload-management)
       - [Jobs and Cronjobs](#jobs-and-cronjobs)
+      - [DaemonSets](#daemonsets)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
     - [Services](#services)
     - [Network Policies](#network-policies)
@@ -126,9 +127,13 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 #### Jobs and Cronjobs
 
-* [K8s Docs - Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
-* [K8s Docs - Cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+* [k8s Docs - Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
+* [k8s Docs - Cronjob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 * [Spacelift Docs - What Are Kubernetes Jobs? Use Cases, Types & How to Run](https://spacelift.io/blog/kubernetes-jobs)
+
+#### DaemonSets
+
+* [k8s Docs - DaemonSets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
 
 ## Services, Load Balancing, and Networking
 
@@ -183,6 +188,7 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Operator Patterns](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 * [OperatorHub](https://operatorhub.io/)
 * [Operator SDK](https://sdk.operatorframework.io/)
+* [Operator SDK - Operator Scope](https://sdk.operatorframework.io/docs/building-operators/golang/operator-scope/)
 * [GitHub - Operator SKD](https://github.com/operator-framework/operator-sdk)
 
 ### Istio and Envoy
