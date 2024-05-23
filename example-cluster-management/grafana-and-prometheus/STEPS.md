@@ -33,14 +33,14 @@
 ### Prometheus Operator Deployment
 
 * ```kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/bundle.yaml --force-conflicts=true --server-side=true```
-* ```kubectl apply -f example-cluster-management/grafana/prometheus-operator-manifest.yaml```
+* ```kubectl apply -f example-cluster-management/grafana-and-prometheus/prometheus-operator-manifest.yaml```
 
 
 ### Prometheus Deployment
 
-* ```kubectl apply -f example-cluster-management/grafana/prometheus-instance.yaml```
-* ```kubectl apply -f example-cluster-management/grafana/prometheus-service-monitor.yaml```
-* ```kubectl apply -f example-cluster-management/grafana/prometheus-service.yaml```
+* ```kubectl apply -f example-cluster-management/grafana-and-prometheus/prometheus-instance.yaml```
+* ```kubectl apply -f example-cluster-management/grafana-and-prometheus/prometheus-service-monitor.yaml```
+* ```kubectl apply -f example-cluster-management/grafana-and-prometheus/prometheus-service.yaml```
 
 ### Prometheus Access
 
@@ -49,17 +49,17 @@
 
 ### Prometheus Clean Up
 
-* ```kubectl delete -f example-cluster-management/grafana/prometheus-service.yaml```
-* ```kubectl delete -f example-cluster-management/grafana/prometheus-service-monitor.yaml```
-* ```kubectl delete -f example-cluster-management/grafana/prometheus-instance.yaml```
-* ```kubectl delete -f example-cluster-management/grafana/prometheus-operator-manifest.yaml```
+* ```kubectl delete -f example-cluster-management/grafana-and-prometheus/prometheus-service.yaml```
+* ```kubectl delete -f example-cluster-management/grafana-and-prometheus/prometheus-service-monitor.yaml```
+* ```kubectl delete -f example-cluster-management/grafana-and-prometheus/prometheus-instance.yaml```
+* ```kubectl delete -f example-cluster-management/grafana-and-prometheus/prometheus-operator-manifest.yaml```
 * ```kubectl delete -f https://raw.githubusercontent.com/prometheus-operator/prometheus-operator/main/bundle.yaml```
 
 ## Grafana Deployment
 
 ### Grafana Deployment
 
-* ```kubectl apply -f example-cluster-management/grafana/grafana-manifest.yaml -n grafana-namespace```
+* ```kubectl apply -f example-cluster-management/grafana-and-prometheus/grafana-manifest.yaml -n grafana-namespace```
 
 ### Grafana Validate
 
@@ -77,4 +77,4 @@ or
 
 ### Grafana Clean Up
 
-* ```kubectl delete -f example-cluster-management/grafana/grafana-manifest.yaml -n grafana-namespace```
+* ```kubectl delete -f example-cluster-management/grafana-and-prometheus/grafana-manifest.yaml -n grafana-namespace```

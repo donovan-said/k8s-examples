@@ -26,3 +26,7 @@ or
 ## Clean Up
 
 ```kubectl delete -f example-apps/nginx/nginx-manifest.yaml -n nginx```
+
+
+
+curl --resolve "nginx-hello.info:80:127.0.0.1" -i http://nginx-hello.info

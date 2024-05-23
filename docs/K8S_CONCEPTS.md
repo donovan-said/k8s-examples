@@ -161,12 +161,8 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ### Ingress
 
-* [YouTube - TechWorld with Nana - Kubernetes Ingress Tutorial](https://www.youtube.com/watch?v=80Ew_fsV4rM&list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC&index=10)
-* [k8s Docs - Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing)
-* [k8s Docs - Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
-
 > [!NOTE]
-> Third party ingress controllers are discussed in more detail in the [ingress controllers](./INGRESS_CONTROLLERS.md) page.
+> Ingress controllers are discussed in more detail in the [ingress controllers](./INGRESS_CONTROLLERS.md) page.
 
 ### Network Policies
 

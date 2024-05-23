@@ -61,7 +61,7 @@ My main guidelines were (though there are many more reference throughout):
 ### Cluster Management
 
 * [Kubernetes Dashboard](./example-cluster-management/kubernetes-dashboard/STEPS.md)
-* [Grafana & Prometheus](./example-cluster-management/grafana/STEPS.md)
+* [Grafana & Prometheus](./example-cluster-management/grafana-and-prometheus/STEPS.md)
 
 ### Manifests
 
