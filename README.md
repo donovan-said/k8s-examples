@@ -23,6 +23,7 @@ My main guidelines were (though there are many more reference throughout):
     - [General](#general)
     - [Package Management](#package-management)
     - [Node Management](#node-management)
+    - [Ingress Controllers](#ingress-controllers)
   - [Examples](#examples)
     - [Kubeconf](#kubeconf)
     - [Cluster Management](#cluster-management)
@@ -36,7 +37,7 @@ My main guidelines were (though there are many more reference throughout):
 
 ### General 
 
-* [K8s Concepts](./docs/K8S_CONCEPTS.md)
+* [K8s Concepts & Guides](./docs/K8S_CONCEPTS.md)
 * [kubectl Common Commands](./docs/KUBECTL_COMMANDS.md)
 
 ### Package Management
@@ -46,6 +47,10 @@ My main guidelines were (though there are many more reference throughout):
 ### Node Management
 
 * [Karpenter Concepts](./docs/KARPENTER_CONCEPTS.md)
+
+### Ingress Controllers
+
+* [Ingress Controllers](./docs/INGRESS_CONTROLLERS.md) 
 
 ## Examples 
 
@@ -84,3 +89,4 @@ My main guidelines were (though there are many more reference throughout):
 * [k8s Docs - References](https://kubernetes.io/docs/reference/)
 * [k8s Docs - Client Libraries](https://kubernetes.io/docs/reference/using-api/client-libraries/)
 * [k8s Docs - kubectl](https://kubernetes.io/docs/reference/kubectl/)
+* [k8s Docs - Glossary](https://kubernetes.io/docs/reference/glossary/?)
