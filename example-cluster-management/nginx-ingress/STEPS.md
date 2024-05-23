@@ -1,7 +1,7 @@
 # Nginx Ingress Controller
 
 <p align="center">
-    <img src="../../imgs/nginx_logo.png" width="320" height="300"> 
+    <img src="../../imgs/nginx_logo.png" width="350" height="150"> 
 </p>
 
 ## Overview
