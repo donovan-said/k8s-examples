@@ -7,8 +7,8 @@
 ## Overview
 
 The purpose of this repository is to act as a collation of useful information 
-relating to k8s and associated third party services. All of which helps me 
-formalise and deepen my k8s knowledge.
+relating to k8s and associated third party services. Essentially, these are my 
+study notes.
 
 My main guidelines were (though there are many more reference throughout):
 * The official [k8s Documentation](https://kubernetes.io/docs/home/)
