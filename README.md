@@ -72,6 +72,7 @@ My main guidelines were (though there are many more reference throughout):
 * [Sample Application](./example-apps/sample-app/STEPS.md)
 * [Sample Sidecar](./example-apps/sample-sidecar/STEPS.md)
 * [Nginx](./example-apps/nginx/STEPS.md)
+* [Argo Workflows](./example-apps/argo-workflows/STEPS.md)
 
 #### Jobs & Cronjobs
 
