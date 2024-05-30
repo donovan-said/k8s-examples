@@ -1,7 +1,7 @@
 # Nginx Ingress Controller
 
 <p align="center">
-    <img src="../../imgs/nginx_logo.png" width="350" height="150"> 
+    <img src="../../imgs/nginx_logo.png" width="400" height="150"> 
 </p>
 
 ## Overview
@@ -72,6 +72,8 @@
 127.0.0.1 kubernetes.docker.internal nginx.demo.local
 # End of section
 ```
+
+* Access ```http://nginx.demo.local/```
 
 ### Clean Up
 

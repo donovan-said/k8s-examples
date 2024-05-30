@@ -17,6 +17,13 @@ __Reference__:
 
 # CHANGELOG
 
+## [0.14.0]
+
+### Added
+
+* Nginx Ingress Controller and sample configuration
+* Argo Workflow deployment
+
 ## [0.13.0]
 
 ### Changed
