@@ -9,48 +9,71 @@
 - [Nginx Ingress Controller](#nginx-ingress-controller)
   - [Overview](#overview)
   - [Guides](#guides)
-  - [Nginx Ingress](#nginx-ingress)
-    - [Nginx Ingress - Deployment](#nginx-ingress---deployment)
-    - [Nginx Ingress - Validate](#nginx-ingress---validate)
-    - [Nginx Ingress - Clean Up](#nginx-ingress---clean-up)
-  - [Nginx Sample App](#nginx-sample-app)
-    - [Nginx Sample App - Deployment](#nginx-sample-app---deployment)
-    - [Nginx Sample App - Validate](#nginx-sample-app---validate)
-    - [Nginx Sample App - Clean Up](#nginx-sample-app---clean-up)
+  - [Nginx Ingress - Controller](#nginx-ingress---controller)
+    - [Deployment](#deployment)
+    - [Validate](#validate)
+    - [Clean Up](#clean-up)
+  - [Nginx Ingress - Demo Application](#nginx-ingress---demo-application)
+    - [Deployment](#deployment-1)
+    - [Validate](#validate-1)
+      - [CLI](#cli)
+      - [Browser](#browser)
+    - [Clean Up](#clean-up-1)
 
 ## Guides
 
+* [k8s Docs - Set Up Nginx Ingress on Minikube](https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/)
 * [Nginx Docs - Installation Guide](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start)
-* [Spacelift Docs - Kubernetes Ingress with NGINX Ingress Controller Example](https://spacelift.io/blog/kubernetes-ingress)
+* [Medium - Abdul Gaffoor - Leveraging Ingress, Services, and Deployments](https://itsmegaffoor.medium.com/w-i-p-docker-desktop-kubernetes-deployment-demystified-leveraging-ingress-services-and-6ca828dc2c43)
 
-## Nginx Ingress
+## Nginx Ingress - Controller
 
-### Nginx Ingress - Deployment
+### Deployment
 
-```shell 
-helm upgrade --install ingress-nginx ingress-nginx \
---repo https://kubernetes.github.io/ingress-nginx \
---namespace ingress-nginx --create-namespace
- ```
+* ```helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace```
 
-### Nginx Ingress - Validate
+### Validate
 
-* ```kubectl get all -n ingress-nginx```
+* ```kubectl get pods --namespace=ingress-nginx```
 
-### Nginx Ingress - Clean Up
+### Clean Up
 
 * ```helm uninstall ingress-nginx -n ingress-nginx```
 
-## Nginx Sample App
+## Nginx Ingress - Demo Application
 
-### Nginx Sample App - Deployment
+### Deployment
 
-* ```kubectl apply -f example-cluster-management/nginx-ingress/sample-nginx-app/manifest.yaml```
+* ```kubectl apply -f example-cluster-management/nginx-ingress/sample-apps/manifest-ingress-demo.yaml```
 
-### Nginx Sample App - Validate
+### Validate
 
-* ```kubectl ```
+#### CLI
 
-### Nginx Sample App - Clean Up
+* ```kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80```
+* ```curl --resolve nginx.demo.local:8080:127.0.0.1 http://nginx.demo.local:8080```
 
-* ```kubectl delete -f example-cluster-management/nginx-ingress/sample-nginx-app/manifest.yaml ```
+#### Browser
+
+* Add the `nginx.demo.local` record to the /etc/hosts file, see below
+
+```shell
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1       localhost
+255.255.255.255 broadcasthost
+::1             localhost
+# Added by Docker Desktop
+# To allow the same kube context to work on the host and the container:
+127.0.0.1 kubernetes.docker.internal nginx.demo.local
+# End of section
+```
+
+### Clean Up
+
+* ```kubectl delete -f example-cluster-management/nginx-ingress/sample-apps/manifest-ingress-demo.yaml```
+* Remove entry from /etc/hosts file
