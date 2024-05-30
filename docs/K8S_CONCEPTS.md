@@ -1,6 +1,6 @@
-# K8s Concepts
+# K8s Concepts & Guides
 
-- [K8s Concepts](#k8s-concepts)
+- [K8s Concepts \& Guides](#k8s-concepts--guides)
   - [Cluster Architecture](#cluster-architecture)
     - [Kubernetes Components](#kubernetes-components)
       - [Nodes](#nodes)
@@ -24,22 +24,23 @@
       - [DaemonSets](#daemonsets)
   - [Services, Load Balancing, and Networking](#services-load-balancing-and-networking)
     - [Services](#services)
-    - [Network Policies](#network-policies)
       - [Service Types](#service-types)
       - [Headless Service](#headless-service)
     - [Ingress](#ingress)
+    - [Network Policies](#network-policies)
   - [Scheduling, Preemption and Eviction](#scheduling-preemption-and-eviction)
   - [Extending Kubernetes](#extending-kubernetes)
     - [Custom Resources](#custom-resources)
       - [Extending the Kubernetes API](#extending-the-kubernetes-api)
       - [Operator Patterns](#operator-patterns)
-    - [Istio and Envoy](#istio-and-envoy)
+  - [Kubernetes API](#kubernetes-api)
   - [Cloud K8s Services](#cloud-k8s-services)
   - [Troubleshooting](#troubleshooting)
 
 ## Cluster Architecture
 
 * [k8s Docs - Cluster Architecture](https://kubernetes.io/docs/concepts/architecture/)
+* [k8s Docs - Glossary](https://kubernetes.io/docs/reference/glossary/?)
 
 ### Kubernetes Components
 
@@ -145,12 +146,6 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [k8s Docs - Use a Service to Access an Application in a Cluster](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/)
 * [k8s Docs - Service Configuratio File](https://kubernetes.io/docs/concepts/services-networking/service/)
 
-### Network Policies
-
-* [YouTube - TechWorld with Nana - Kubernetes Networking - Container Communication inside the Pod](https://www.youtube.com/watch?v=5cNrTU6o3Fw&t=11s)
-* [k8s Docs - Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
-* [GitHub - The Container Network Interface (cni)](https://github.com/containernetworking/cni)
-
 #### Service Types
 
 | Service Type                                                                                  | Description                                              |
@@ -166,9 +161,14 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 
 ### Ingress
 
-* [YouTube - TechWorld with Nana - Kubernetes Ingress Tutorial](https://www.youtube.com/watch?v=80Ew_fsV4rM&list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC&index=10)
-* [k8s Docs - Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#load-balancing)
-* [k8s Docs - Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
+> [!NOTE]
+> Ingress controllers are discussed in more detail in the [ingress controllers](./INGRESS_CONTROLLERS.md) page.
+
+### Network Policies
+
+* [YouTube - TechWorld with Nana - Kubernetes Networking - Container Communication inside the Pod](https://www.youtube.com/watch?v=5cNrTU6o3Fw&t=11s)
+* [k8s Docs - Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+* [GitHub - The Container Network Interface (cni)](https://github.com/containernetworking/cni)
 
 ## Scheduling, Preemption and Eviction
 
@@ -191,10 +191,12 @@ The default path for the kubeconf file is ```$HOME/.kube/config```.
 * [Operator SDK - Operator Scope](https://sdk.operatorframework.io/docs/building-operators/golang/operator-scope/)
 * [GitHub - Operator SKD](https://github.com/operator-framework/operator-sdk)
 
-### Istio and Envoy
+## Kubernetes API
 
-* [Istio Docs - Architecture](https://istio.io/latest/docs/ops/deployment/architecture/)
-* [Envoy Docs](https://www.envoyproxy.io/)
+* [k8s Docs - Kubernetes API - Overview](https://kubernetes.io/docs/reference/using-api/)
+* [k8s Docs - Kubernetes API - Access Control](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)
+* [k8s Docs - Kubernetes API - Reference](https://kubernetes.io/docs/reference/kubernetes-api/)
+* [k8s Docs - Kubernetes API - Client Libraries](https://kubernetes.io/docs/reference/using-api/client-libraries/)
 
 ## Cloud K8s Services 
 
